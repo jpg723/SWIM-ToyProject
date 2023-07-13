@@ -1,20 +1,20 @@
 import { Link } from "react-router-dom";
-import "./SignupForm.css";
+import "./Signup.css";
 import SignupForm from "./SignupForm";
 import { useForm } from "react-hook-form";
 
 function Signup() {
     return (
-        <div className="Login-entire">
-          <div id="Login-header">
-            <Link to="/" id="Login-header-content">
-              <div id="Login-logo-image"></div>
-              <text id="Login-logo-text">SWIM</text>
+        <div className="Signup-entire">
+          <div id="Signup-header">
+            <Link to="/" id="Signup-header-content">
+              <div id="Signup-logo-image"></div>
+              <text id="Signup-logo-text">SWIM</text>
             </Link>
           </div>
-          <div className="Login-body">
-            <div className="Login-box">
-              <Link to="/" id="Login-box-back_btn">
+          <div className="Signup-body">
+            <div className="Signup-box">
+              <Link to="/" id="Signup-box-back_btn">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="36"
@@ -29,14 +29,11 @@ function Signup() {
                 </svg>
               </Link>
     
-              <div id="Login-box-login">SIGN IN</div>
-              <div id="Login-box-login_txt">
+              <div id="Signup-box-Signup">SIGN UP</div>
+              <div id="Signup-box-Signup_txt">
               Create an account and start using SWIM.
               </div>
-    
               <SignupForm />
-    
-              
             </div>
           </div>
         </div>

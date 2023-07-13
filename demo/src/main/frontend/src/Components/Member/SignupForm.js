@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import "./SignupForm.css";
 
 function SignupForm({
   onSubmit = async (data) => {
@@ -11,7 +12,6 @@ function SignupForm({
     handleSubmit,
     formState: { isSubmitting, isDirty, errors },
   } = useForm();
-
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div>
@@ -29,7 +29,7 @@ function SignupForm({
 
       <div>
         <input
-          id="password"
+          id="Signup-password"
           type="password"
           placeholder="PassWord"
           aria-invalid={
@@ -47,9 +47,18 @@ function SignupForm({
           <small role="alert">{errors.password.message}</small>
         )}
       </div>
+      <div>
+        <input id="Signup-name" type="text" placeholder="Name" />
+      </div>
+      <div>
+        <input id="Signup-phone" type="tel" placeholder="Phone" />
+      </div>
 
-      <button id="LoginForm-Login_btn" type="submit" disabled={isSubmitting}>
-        Log in
+      <button id="SignupForm-Signup_btn" type="submit" disabled={isSubmitting}>
+        SIGN UP
+      </button>
+      <button id="SignupForm-Login_btn" type="submit" disabled={isSubmitting}>
+        LOG IN
       </button>
     </form>
   );
