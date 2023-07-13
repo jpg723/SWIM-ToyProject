@@ -1,0 +1,49 @@
+#Header{
+    height: 100px;
+    display: flex; /*수평 정렬*/
+}
+
+/*로고-------------------------------------------------*/
+#header-content1{
+    display: flex;
+    margin: auto 0px auto 55px; 
+    text-decoration-line: none;
+}
+
+#logo-image{
+    border: 1px solid black;
+    width: 50px;
+}
+
+#logo-text{
+    font-weight: bold;
+    color: #93B7FF;
+    font-size: 35px;
+    margin-left: 10px;
+}
+
+/*헤더 버튼-----------------------------------------------*/
+#header-content2{
+    display: flex;
+    margin: auto 70px auto auto;
+}
+
+#header-botton-box2{
+    margin-left: 29px;
+}
+
+#new-wirte-btn, #login-btn{
+    background-color: #F1F1F1;
+    width: 120px;
+    height: 40px;
+    border-style: none;
+    border-radius: 50px;
+    font-size: 15px;
+}
+
+/*구분선--------------------------------------------*/
+#header-line{
+    border: 1px solid #F1F1F1;
+    width: 1200px;
+    margin: 0 auto;
+}

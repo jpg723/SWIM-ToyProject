@@ -1,0 +1,29 @@
+.WriteForm-1,.WriteForm-2{
+    margin-left: 60px;
+    margin-right: 60px;
+}
+#WriteForm-1txt{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    
+    margin-top: 50px;
+
+    border-bottom: 1px solid #CCC;
+    color: #7CA9FF;
+    text-align: center;
+    font-family: Coda Caption;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: -0.45px;
+}
+#WriteForm-1txt-info,#WriteForm-2-info{
+    margin: 20px 60px 0 30px;
+}
+#WriteForm-1txt-info-select{
+    margin: 20px;
+    border-radius: 20px;
+    background: #F1F1F1;
+}
