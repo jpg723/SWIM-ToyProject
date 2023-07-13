@@ -47,7 +47,7 @@ function WriteForm() {
         <div id="WriteForm-1txt">스터디 기본정보를 입력 해주세요.</div>
         <div id="WriteForm-1txt-info">
           <div id="WriteForm-1txt-info-select">
-            <text id="WriteForm-option">카테고리</text>
+            <div  id="WriteForm-option"><text id="s">카테고리</text></div>
             <select>
               <option value="language">어학</option>
               <option value="employment">취업</option>
