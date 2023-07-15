@@ -1,12 +1,15 @@
 #Header{
     height: 100px;
     display: flex; /*수평 정렬*/
+    border-bottom: 2px solid #F1F1F1;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 /*로고-------------------------------------------------*/
 #header-content1{
     display: flex;
-    margin: auto 0px auto 55px; 
+    margin: auto 0px auto 35px; 
     text-decoration-line: none;
 }
 
@@ -41,9 +44,3 @@
     font-size: 15px;
 }
 
-/*구분선--------------------------------------------*/
-#header-line{
-    border: 1px solid #F1F1F1;
-    width: 1200px;
-    margin: 0 auto;
-}

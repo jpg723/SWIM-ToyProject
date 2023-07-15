@@ -19,7 +19,6 @@ function Header() {
           </Link>
         </div>
       </div>
-      <div id="header-line"></div>
       <Outlet />
     </div>
   );

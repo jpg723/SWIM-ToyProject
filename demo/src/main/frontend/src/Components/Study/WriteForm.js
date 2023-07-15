@@ -1,9 +1,11 @@
+import { useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import "./WriteForm.css";
 
 function WriteForm() {
-  var region_option = [
+  // 지역 value도 한글로 전달
+  let [region_option, set_region_option] = useState([
     "전체",
     "서울",
     "수원",
@@ -19,30 +21,8 @@ function WriteForm() {
     "춘천",
     "원주",
     "기타",
-  ];
-  var region_value = [
-    "Entire",
-    "Seoul",
-    "Suwon",
-    "Incheon",
-    "Daegu",
-    "Busan",
-    "Ulsan",
-    "Gwangju",
-    "Jeonju",
-    "Daejeon",
-    "Sejong",
-    "Jeju",
-    "ChunCheon",
-    "Wonju",
-    "etc",
-  ];
+  ]);
 
-  function option_repeat() {
-    for (let i = 0; i < region_option.length; i++) {
-      <option value={region_value}>{region_option}</option>;
-    }
-  }
   return (
     <div>
       <div className="WriteForm-1">
@@ -78,7 +58,15 @@ function WriteForm() {
 
           <div id="WriteForm-1txt-info-select">
             <text id="WriteForm-option">지역</text>
-            <select id="WriteForm-option_value">option_repeat()</select>
+            <select id="WriteForm-option_value">
+              {
+              region_option.map(function (a) {
+                return(
+                  <option value={a}>{a}</option>
+                )
+              })
+              }
+            </select>
           </div>
         </div>
       </div>
