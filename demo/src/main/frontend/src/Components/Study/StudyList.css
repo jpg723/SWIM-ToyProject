@@ -1,0 +1,108 @@
+#study-list-main{
+    margin: 50px auto;
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/*스터디 박스*/
+.study-box{
+    border: 2px solid #cbcbcb;
+    width: 270px;
+    height: 300px;
+    border-radius: 30px;
+    box-shadow: 3px 3px 3px 3px #cbcbcb;
+    margin-left: 22px;
+    margin-bottom: 30px;
+}
+
+.study-box-inbox{
+    margin: 0 auto;
+    width: 250px;
+    height: 300px;
+}
+
+/*스터디 박스 헤더*/
+.study-box-header{
+    display: flex;
+    margin-top: 20px;
+}
+
+/*스터디 박스 헤더 태그*/
+.study-box-header-content1, .study-box-header-content2{
+    border: none;
+    border-radius: 20px;
+    font-size: 15px;
+    padding: 5px 12px;
+    margin-left: 10px;
+    background-color: #F1F1F1;
+}
+
+.study-box-header-content2{
+    background-color: #93B7FF;
+    color: white;
+}
+
+/*스터디 박스 메인 박스*/
+.study-box-main{
+    height: 120px;
+    padding: 10px 12px;
+}
+
+/*스터디 박스 메인 지역*/
+.study-box-region{
+    font-size: 16px;
+    color: gray;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/*스터디 박스 메인 제목*/
+.study-box-title{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/*구분선*/
+.study-box-inbox-line{
+    border: 1.5px solid #F1F1F1;
+}
+
+/*스터디 박스 하단 박스*/
+.study-box-footer{
+    margin-top: 15px;
+    height: 30px;
+    display: flex;
+}
+
+.study-box-footer-content{
+    display: flex;
+    height: 25px;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.study-box-footer-icon2{
+    padding-top: 2px;
+    margin-left: 15px;
+}
+
+/*조회수, 댓글 개수*/
+.study-box-footer-count{
+    margin-left: 5px;
+    color: gray;
+    font-size: 18px;
+}
+
+/*찜버튼*/
+#like-btn{
+    border-radius: 20px;
+    background-color: white;
+    border: none;
+    margin-left: 195px;
+}
+
+.btn_itemLike_icon{
+    width: 40px;
+    height: 40px;
+}
