@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Signup.css";
 import SignupForm from "./SignupForm";
-import { useForm } from "react-hook-form";
 
 function Signup() {
     return (

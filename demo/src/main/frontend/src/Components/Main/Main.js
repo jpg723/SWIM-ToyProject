@@ -11,12 +11,12 @@ function Main() {
             <div class="main-content2">SWIM</div>
             <div class="main-content3">홈페이지 설명</div>
             <div class="main-content4">
-                <div class="main-btn-box1">
+                <Link to='/study-list' class="main-btn-box1">
                     <button id="study-list-btn">
                         <Polygon/>
                         <text class="study-list-btn-text">글 보러가기</text>
                     </button>
-                </div>
+                </Link>
                 <Link to="/sign-up" class="main-btn-box2">  
                     <button id="signup-btn">
                         <text class="signup-btn-text">Sign Up</text>
