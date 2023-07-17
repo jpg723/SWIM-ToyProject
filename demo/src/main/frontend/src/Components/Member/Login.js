@@ -44,12 +44,16 @@ function Login() {
 
           {/* 아이디 찾기, 비번 찾기 */}
           <div id="search">
+          <Link to="/search_id">
             <button id="search-id">
               <text>아이디 찾기</text>
             </button>
+            </Link>
+            <Link to="/search_password">
             <button id="search-password">
               <text>비번 찾기</text>
             </button>
+            </Link>
           </div>
         </div>
       </div>

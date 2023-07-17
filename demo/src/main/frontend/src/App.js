@@ -6,6 +6,9 @@ import Signup from './Components/Member/Signup';
 import WriteForm from './Components/Study/WriteForm';
 import StudyList from './Components/Study/StudyList';
 
+import Search_ID from './Components/Member/Search_ID';
+import Search_password from './Components/Member/Search_password';
+
 function App() {
   return (
     <div className="App">
@@ -19,6 +22,8 @@ function App() {
         {/* Header,Footer를 안 보여주고 싶은 컴포넌트 */}
         <Route path="/sign-up" element={<Signup />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/search_id" element={<Search_ID />} />
+        <Route path="/search_password" element={<Search_password />} />
       </Routes>
     </div>
   );
