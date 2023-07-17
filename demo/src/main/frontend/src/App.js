@@ -1,13 +1,15 @@
-import { Routes, Route } from "react-router-dom";
-import Main from './Components/Main/Main';
-import Header from './Components/Main/Header';
-import Login from './Components/Member/Login';
-import Signup from './Components/Member/Signup';
-import WriteForm from './Components/Study/WriteForm';
-import StudyList from './Components/Study/StudyList';
+import { Route, Routes } from "react-router-dom";
+import Header from "./Components/Main/Header";
+import Main from "./Components/Main/Main";
+import StudyList from "./Components/Study/StudyList";
+import WriteForm from "./Components/Study/WriteForm";
 
-import Search_ID from './Components/Member/Search_ID';
-import Search_password from './Components/Member/Search_password';
+//멤버 폴더 애들
+import Login from "./Components/Member/Login";
+import Member_Header from "./Components/Member/Member_Header";
+import Search_ID from "./Components/Member/Search_ID";
+import Search_password from "./Components/Member/Search_password";
+import Signup from "./Components/Member/Signup";
 
 function App() {
   return (
@@ -20,10 +22,12 @@ function App() {
           <Route path="/study-list" element={<StudyList />} />
         </Route>
         {/* Header,Footer를 안 보여주고 싶은 컴포넌트 */}
-        <Route path="/sign-up" element={<Signup />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/search_id" element={<Search_ID />} />
-        <Route path="/search_password" element={<Search_password />} />
+        <Route element={<Member_Header />}>
+          <Route path="/sign-up" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/search_id" element={<Search_ID />} />
+          <Route path="/search_password" element={<Search_password />} />
+        </Route>
       </Routes>
     </div>
   );

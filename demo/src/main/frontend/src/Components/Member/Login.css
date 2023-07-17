@@ -1,31 +1,7 @@
-.Login-entire{
-    background-color: #F1F1F1;
-}
-#Login-header{
-    display: flex;
-    height: 170px;
-    justify-content: center;
-    align-items: center;
-}
 
-#Login-header-content{
-    display: flex;
-    text-decoration-line: none;
-}
-
-#Login-logo-image{
-    border: 1px solid black;
-    width: 50px;
-}
-
-#Login-logo-text{
-    font-weight: bold;
-    color: #93B7FF;
-    font-size: 35px;
-    margin-left: 10px;
-}
 
 .Login-body{
+    background-color: #F1F1F1;
     display: flex;
     height: 600px;
     justify-content: center;

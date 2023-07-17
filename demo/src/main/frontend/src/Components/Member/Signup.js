@@ -4,13 +4,6 @@ import SignupForm from "./SignupForm";
 
 function Signup() {
     return (
-        <div className="Signup-entire">
-          <div id="Signup-header">
-            <Link to="/" id="Signup-header-content">
-              <div id="Signup-logo-image"></div>
-              <text id="Signup-logo-text">SWIM</text>
-            </Link>
-          </div>
           <div className="Signup-body">
             <div className="Signup-box">
               <Link to="/" id="Signup-box-back_btn">
@@ -35,7 +28,6 @@ function Signup() {
               <SignupForm />
             </div>
           </div>
-        </div>
       );
 }
 

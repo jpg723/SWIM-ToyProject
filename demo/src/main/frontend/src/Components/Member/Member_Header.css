@@ -1,0 +1,19 @@
+#Member-header{
+  display: flex;
+  text-decoration-line: none;
+  padding: 60px;
+  justify-content: center;
+  background-color: #F1F1F1;
+}
+
+#Member-logo-image {
+  border: 1px solid black;
+  width: 50px;
+}
+
+#Member-logo-text {
+  font-weight: bold;
+  color: #93b7ff;
+  font-size: 35px;
+  margin-left: 10px;
+}

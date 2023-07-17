@@ -5,13 +5,6 @@ import LoginForm from "./LoginForm";
 function Login() {
   /*id는 요소가 하나인 경우 많이 사용, css가 비슷한 요소가 많은 경우 사용*/
   return (
-    <div className="Login-entire">
-      <div id="Login-header">
-        <Link to="/" id="Login-header-content">
-          <div id="Login-logo-image"></div>
-          <text id="Login-logo-text">SWIM</text>
-        </Link>
-      </div>
       <div className="Login-body">
         <div className="Login-box">
           <Link to="/" id="Login-box-back_btn">
@@ -57,7 +50,6 @@ function Login() {
           </div>
         </div>
       </div>
-    </div>
   );
 }
 
