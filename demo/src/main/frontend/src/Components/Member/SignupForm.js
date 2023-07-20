@@ -48,17 +48,29 @@ function SignupForm({
         )}
       </div>
       <div>
-        <input id="Signup-name" type="text" placeholder="Name" />
+        <input
+        id="Signup-name"
+        type="text"
+        placeholder="Name"
+        />
       </div>
       <div>
-        <input id="Signup-phone" type="tel" placeholder="Phone" />
+        <input
+        id="Signup-phone"
+        type="tel"
+        placeholder="Phone"
+        />
       </div>
 
-      <button id="SignupForm-Signup_btn" type="submit" disabled={isSubmitting}>
-        SIGN UP
+      <button
+      id="SignupForm-Signup_btn"
+      type="submit" disabled={isSubmitting
+      }>SIGN UP
       </button>
-      <button id="SignupForm-Login_btn" type="submit" disabled={isSubmitting}>
-        LOG IN
+      <button
+      id="SignupForm-Login_btn"
+      type="submit"
+      disabled={isSubmitting}>LOG IN
       </button>
     </form>
   );
