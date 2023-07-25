@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Header from "./Components/Main/Header";
 import Main from "./Components/Main/Main";
 
-//Study 폴더 애
+//Study 폴더 애들
 import StudyList from "./Components/Study/StudyList";
 import StudyView from "./Components/Study/StudyView";
 import WriteForm from "./Components/Study/WriteForm";
