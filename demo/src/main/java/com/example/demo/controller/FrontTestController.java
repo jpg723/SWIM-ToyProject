@@ -1,13 +1,14 @@
-package com.example.demo;
+package com.example.demo.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+ 
 @RestController
-public class TestController {
-
+public class FrontTestController {
+ 
     @GetMapping("/api/hello")
     public String hello(){
-        return "정소은";
+        return "Hello World!";
     }
 }

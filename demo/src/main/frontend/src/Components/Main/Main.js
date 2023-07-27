@@ -4,7 +4,7 @@ import { ReactComponent as Arrow} from "../../svg/Arrow 1.svg";
 import { Link } from "react-router-dom";
 
 function Main() {
-    /*id는 요소가 하나인 경우 많이 사용, css가 비슷한 요소가 많은 경우 사용*/
+
     return (
         <div id="Main">
             <div class="main-content1">Study With Me</div>

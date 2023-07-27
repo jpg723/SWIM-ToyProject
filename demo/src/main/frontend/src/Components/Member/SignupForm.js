@@ -1,5 +1,7 @@
 import { useForm } from "react-hook-form";
 import "./SignupForm.css";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios'; 
 
 function SignupForm({
   onSubmit = async (data) => {
@@ -12,6 +14,7 @@ function SignupForm({
     handleSubmit,
     formState: { isSubmitting, isDirty, errors },
   } = useForm();
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div>
@@ -63,14 +66,14 @@ function SignupForm({
       </div>
 
       <button
-      id="SignupForm-Signup_btn"
-      type="submit" disabled={isSubmitting
-      }>SIGN UP
+        id="SignupForm-Signup_btn"
+        type="submit" disabled={isSubmitting}>SIGN UP
       </button>
+
       <button
-      id="SignupForm-Login_btn"
-      type="submit"
-      disabled={isSubmitting}>LOG IN
+        id="SignupForm-Login_btn"
+        type="submit"
+        disabled={isSubmitting}>LOG IN
       </button>
     </form>
   );
