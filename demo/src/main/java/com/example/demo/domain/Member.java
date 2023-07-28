@@ -24,21 +24,22 @@ public class Member implements Serializable{
 	public String getUser_name() {
 		return user_name;
 	}
-	public void setUser_name(String phone) {
-		this.phone = phone;
+	public void setUser_name(String user_name) {
+		this.user_name = user_name;
 	}
 	
 	public String getPhone() {
-		return user_name;
+		return phone;
 	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
 	public String getProfile() {
 		return profile;
 	}
 	public void setProfile(String profile) {
 		this.profile = profile;
-	}
-	public void setPhone(String phone) {
-		this.phone = phone;
 	}
 			
 	@Override

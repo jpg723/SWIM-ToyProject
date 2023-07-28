@@ -1,5 +1,7 @@
 package com.example.demo.controller;
 
+import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,24 +22,24 @@ public class MemberController {
 	
 	//회원가입
     @ResponseBody
-    @RequestMapping(value="/member/register", method=RequestMethod.POST) 
-      public Member initNewItem(HttpServletRequest request,
+    @RequestMapping(value="/register", method=RequestMethod.POST)
+      public Member registerMember(HttpServletRequest request,
             @RequestBody Map<String, Object> paramMap
             )  {
+
        String[] memberInfo = new String[5];
        int i = 0;
        for (Map.Entry<String, Object> pair : paramMap.entrySet()) {
     	   memberInfo[i] = pair.getValue().toString();
-          System.out.println(memberInfo[i]);
-            i++;
+           i++;
          }
        Member member = new Member();
-       member.setUser_name(memberInfo[0]);
+       member.setUser_id(memberInfo[0]);
        member.setPassword(memberInfo[1]);
        member.setUser_name(memberInfo[2]);
-       member.setPhone(memberInfo[3]);    
-       member.setProfile(memberInfo[4]);
-      
+       member.setPhone(memberInfo[3]);
+
+       System.out.println(member);
        memberService.registerMember(member);
        return member;
       }
