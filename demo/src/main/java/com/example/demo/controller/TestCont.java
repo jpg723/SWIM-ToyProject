@@ -24,7 +24,6 @@ public class TestCont {
    
    @Autowired
    MemberServiceImpl memberService;
-   
    @RequestMapping(value="/test/{id}/{password}/{name}/{phone}", method = RequestMethod.GET)
    public String handleRequest2(@PathVariable String id, @PathVariable String password, @PathVariable String name, @PathVariable String phone) 
            throws Exception {
