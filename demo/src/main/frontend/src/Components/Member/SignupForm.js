@@ -34,7 +34,7 @@ function SignupForm({
       {/*아이디 입력*/}
       <div>
         <input
-          id="id"
+          id="Signup-id"
           type="text"
           placeholder="ID"
           aria-invalid={!isDirty ? undefined : errors.id ? "true" : "false"}

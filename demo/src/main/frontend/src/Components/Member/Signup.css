@@ -41,19 +41,16 @@
 }
 
 #Signup-box-Signup_txt {
-  border: 1px solid black;
   display: flex;
+  padding-top: 5px;
   padding-left: 10px;
   padding-right: 60px;
-  justify-content: center;
   flex-direction: column;
   color: #788088;
   font-family: Montserrat;
   font-size: 15px;
   font-style: normal;
   font-weight: 500;
-  line-height: normal;
-  letter-spacing: -0.36px;
 }
 
 #Signup-Sinup-Link {
