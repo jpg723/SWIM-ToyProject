@@ -23,7 +23,7 @@ function Signup() {
     
               <div id="Signup-box-Signup">SIGN UP</div>
               <div id="Signup-box-Signup_txt">
-              Create an account and start using SWIM.
+                Create an account and start using SWIM.
               </div>
               <SignupForm />
             </div>

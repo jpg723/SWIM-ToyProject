@@ -1,17 +1,16 @@
 #sign-form {
-  margin: 20px 40px 20px 40px;
+  margin: 20px 10px 20px 10px;
 }
 
 #Signup-id, #Signup-password, #Signup-name, #Signup-phone{
-  /* padding-left:  20px  ; */
   height: 45px;
-  width: 250px;
+  width: 315px;
   border-radius: 10px;
   background: hsl(0, 0%, 95%);
   border: 0;
   color: #788088;
   font-family: Montserrat;
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 500;
   letter-spacing: -0.48px;
@@ -24,7 +23,7 @@
 
 #SignupForm-Signup_btn, #SignupForm-Login_btn{
   height: 45px;
-  width: 270px;
+  width: 340px;
   margin-top: 10px;
   border: none;
   border-radius: 10px;
@@ -32,7 +31,7 @@
   color: #FFF;
   text-align: center;
   font-family: Montserrat;
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
