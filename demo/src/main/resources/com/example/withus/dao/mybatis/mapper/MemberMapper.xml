@@ -9,7 +9,7 @@
       VALUES(#{user_id}, #{password}, #{user_name}, #{phone})
    </insert>
 
-    <select id="findByIdAndPassword" resultType="MEMBER">
+    <select id="findByIdAndPassword">
         SELECT *
         FROM MEMBER
         WHERE USER_ID = #{user_id}

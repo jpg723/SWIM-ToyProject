@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 import "./LoginForm.css";
 
 function LoginForm({
@@ -14,7 +15,7 @@ function LoginForm({
   } = useForm();
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form id="login-form" onSubmit={handleSubmit(onSubmit)}>
       <div>
         <input
           id="id"
@@ -25,7 +26,7 @@ function LoginForm({
             required: "ID는 필수 입력입니다.",
           })}
         />
-        {errors.email && <small role="alert">{errors.email.message}</small>}
+        <div class="login-error">{errors.email && <small role="alert">{errors.email.message}</small>}</div>
       </div>
 
       <div>
@@ -44,14 +45,15 @@ function LoginForm({
             },
           })}
         />
-        {errors.password && (
+        <div class="login-error">{errors.password && (
           <small role="alert">{errors.password.message}</small>
-        )}
+        )}</div>
       </div>
 
-      <button id="LoginForm-Login_btn" type="submit" disabled={isSubmitting}>
-        Log in
-      </button>
+      <button id="LoginForm-Login_btn" type="submit" disabled={isSubmitting}>Log in</button>
+      <Link to="/sign-up" id="Login-Sinup-btn">
+        <button id="Login-Sinup-btn"><text>Sign Up</text></button>
+      </Link>
     </form>
   );
 }

@@ -2,11 +2,11 @@ import { useForm } from "react-hook-form";
 import "./SignupForm.css";
 import React from 'react';
 import axios from 'axios'; 
+import { Link } from "react-router-dom";
 
 function SignupForm({
-  onSubmit = async (data) => {
+  OnSubmit = async (data) => {
     await new Promise((r) => setTimeout(r, 1000));
-
     axios(
       {
         url: '/member/register',
@@ -30,7 +30,7 @@ function SignupForm({
   } = useForm();
 
   return (
-    <form id="sign-form" onSubmit={handleSubmit(onSubmit)}>
+    <form id="sign-form" onSubmit={handleSubmit(OnSubmit)}>
       {/*아이디 입력*/}
       <div>
         <input
@@ -106,11 +106,10 @@ function SignupForm({
         type="submit" disabled={isSubmitting}>SIGN UP
       </button>
       {/*LOG IN 버튼*/}
-      <button
-        id="SignupForm-Login_btn"
-        type="submit"
-        disabled={isSubmitting}>LOG IN
-      </button>
+      <Link to="/login" id="SignupForm-Login_btn">
+        <button id="SignupForm-Login_btn">LOG IN
+        </button>
+      </Link>
     </form>
   );
 }

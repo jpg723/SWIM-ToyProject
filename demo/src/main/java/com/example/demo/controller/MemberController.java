@@ -42,7 +42,6 @@ public class MemberController {
        memberService.registerMember(member);
        return member;
     }
-
     //로그인
     @RequestMapping(value="/login", method=RequestMethod.POST)
     public Member Login (@RequestBody Map<String, Object> paramMap) {

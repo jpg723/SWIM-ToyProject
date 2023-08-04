@@ -26,27 +26,19 @@ function Login() {
           <div id="Login-box-login_txt">
             Sign in if you already have an account.
           </div>
-
-          <LoginForm />
-
-          <Link to="/sign-up" id="Login-Sinup-Link">
-            <button id="Login-Sinup-Link-btn">
-              <text>Sign Up</text>
-            </button>
-          </Link>
-
+          <div><LoginForm /></div>
           {/* 아이디 찾기, 비번 찾기 */}
-          <div id="search">
-          <Link to="/search_id">
-            <button id="search-id">
-              <text>아이디 찾기</text>
-            </button>
-            </Link>
-            <Link to="/search_password">
-            <button id="search-password">
-              <text>비번 찾기</text>
-            </button>
-            </Link>
+          <div id="login-search">
+            <div id="login-search-id">
+              <Link to="/search_id" id="login-search-id">
+                <text class="login-search-text1">Forgot your</text><text>ID?</text>
+              </Link>
+            </div>
+            <div id="login-search-pw">
+              <Link to="/search_pw" id="login-search-pw">
+                <text class="login-search-text1">Forgot your</text><text>PassWord?</text>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
