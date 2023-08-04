@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import "./Login.css";
 import LoginForm from "./LoginForm";
+import React from 'react';
+import Popup from 'react-ts-popup';
 
 function Login() {
   /*id는 요소가 하나인 경우 많이 사용, css가 비슷한 요소가 많은 경우 사용*/
@@ -31,7 +33,8 @@ function Login() {
           <div id="login-search">
             <div id="login-search-id">
               <Link to="/search_id" id="login-search-id">
-                <text class="login-search-text1">Forgot your</text><text>ID?</text>
+                <text class="login-search-text1">Forgot your</text>
+                <text>ID?</text>
               </Link>
             </div>
             <div id="login-search-pw">

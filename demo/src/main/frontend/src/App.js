@@ -30,7 +30,7 @@ function App() {
           <Route path="/sign-up" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/search_id" element={<Search_ID />} />
-          <Route path="/search_password" element={<Search_password />} />
+          <Route path="/search_pw" element={<Search_password />} />
         </Route>
       </Routes>
     </div>
