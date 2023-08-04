@@ -9,11 +9,11 @@
 .Signup-box {
   border-radius: 30px;
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   background: #fff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   width: 352px;
-  height: 444.78px;
+  height: 450px;
   padding: 20px;
 }
 
@@ -22,8 +22,7 @@
   width: 20px;
   display: flex;
   position: relative;
-  margin: 5px auto 5px 10px;
-  padding-right: 0;
+  margin: 2px auto 2px 10px;
 }
 
 #Signup-box-Signup {
@@ -34,7 +33,7 @@
   justify-content: center;
   color: #27272b;
   font-family: Montserrat;
-  font-size: 35px;
+  font-size: 30px;
   font-style: normal;
   font-weight: 700;
   line-height: 36px;

@@ -42,7 +42,7 @@ function SignupForm({
             required: "ID는 필수 입력입니다.",
           })}
         />
-        {errors.id && <small role="alert">{errors.id.message}</small>}
+        <div class="signup-error">{errors.id && <small role="alert">{errors.id.message}</small>}</div>
       </div>
       {/*비밀번호 입력*/}
       <div>
@@ -61,9 +61,7 @@ function SignupForm({
             },
           })}
         />
-        {errors.password && (
-          <small role="alert">{errors.password.message}</small>
-        )}
+        <div class="signup-error">{errors.password && (<small role="alert">{errors.password.message}</small>)}</div>
       </div>
       {/*이름 입력*/}
       <div>
@@ -82,9 +80,7 @@ function SignupForm({
             },
           })}
         />
-        {errors.name && (
-          <small role="alert">{errors.name.message}</small>
-        )}
+        <div class="signup-error">{errors.name && (<small role="alert">{errors.name.message}</small>)}</div>
       </div>
       {/*핸드폰 번호 입력*/}
       <div>
@@ -102,10 +98,7 @@ function SignupForm({
               message: "전화번호 형식에 맞지 않습니다.",
             },
           })}
-        />
-        {errors.phone && (
-          <small role="alert">{errors.phone.message}</small>
-        )}
+        /><div class="signup-error">{errors.phone && (<small role="alert">{errors.phone.message}</small>)}</div>
       </div>
       {/*SIGN UP 버튼*/}
       <button

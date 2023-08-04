@@ -7,5 +7,13 @@
    <insert id="registerMember">
       INSERT INTO MEMBER(USER_ID, PASSWORD, NAME, PHONE)
       VALUES(#{user_id}, #{password}, #{user_name}, #{phone})
-   </insert>  
+   </insert>
+
+    <select id="findByIdAndPassword" resultType="MEMBER">
+        SELECT *
+        FROM MEMBER
+        WHERE USER_ID = #{user_id}
+        AND PASSWORD = #{password}
+    </select>
 </mapper>
+

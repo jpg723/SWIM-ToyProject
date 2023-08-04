@@ -16,4 +16,10 @@ public class MemberServiceImpl implements MemberService {
 	public void registerMember(Member member) {
 		memberDao.registerMember(member);
 	}
+	@Override
+	public Member findByIdAndPassword(String user_id, String password) {
+		// TODO Auto-generated method stub
+		return memberDao.findByIdAndPassword(user_id, password);
+	}
+
 }

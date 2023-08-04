@@ -1,10 +1,11 @@
 #sign-form {
-  margin: 20px 10px 20px 10px;
+  margin: 15px 28px 20px 28px;
 }
 
 #Signup-id, #Signup-password, #Signup-name, #Signup-phone{
-  height: 45px;
-  width: 315px;
+  margin: 0 auto;
+  height: 40px;
+  width: 280px;
   border-radius: 10px;
   background: hsl(0, 0%, 95%);
   border: 0;
@@ -17,14 +18,9 @@
   padding-left: 20px;
 }
 
-#Signup-password, #Signup-name, #Signup-phone{
-  margin-top: 10px;
-}
-
 #SignupForm-Signup_btn, #SignupForm-Login_btn{
-  height: 45px;
-  width: 340px;
-  margin-top: 10px;
+  height: 40px;
+  width: 305px;
   border: none;
   border-radius: 10px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -45,4 +41,13 @@
 #SignupForm-Login_btn{
   background: #27272B;
   margin-top: 10px;
+}
+
+/*유효성 검사 메시지*/
+.signup-error{
+  height: 20px;
+  margin-top: 3px;
+  margin-left: 10px;
+  font-size: 10px;
+  color: red;
 }
