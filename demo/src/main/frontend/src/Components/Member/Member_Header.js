@@ -8,7 +8,7 @@ function Member_Header() {
         <div id="Member-logo-image"></div>
         <text id="Member-logo-text">SWIM</text>
       </Link>
-      <Outlet />
+        <Outlet />
     </div>
   );
 }

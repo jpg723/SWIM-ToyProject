@@ -1,27 +1,25 @@
 .Signup-body {
-  background-color: #f1f1f1;
   display: flex;
   justify-content: center;
-  align-items: center;
+  background-color: #f1f1f1;
+  height: 515px;
 }
 
 /*회원가입 박스*/
 .Signup-box {
   border-radius: 30px;
   margin-top: 10px;
-  margin-bottom: 15px;
   background: #fff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   width: 352px;
-  height: 450px;
-  padding: 20px;
+  height: 470px;
+  padding: 20px 20px 0px 20px;
 }
 
 /* 화살표 */
 #Signup-box-back_btn {
   width: 20px;
   display: flex;
-  position: relative;
   margin: 2px auto 2px 10px;
 }
 

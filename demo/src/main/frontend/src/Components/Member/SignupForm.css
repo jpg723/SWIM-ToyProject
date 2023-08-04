@@ -18,6 +18,10 @@
   padding-left: 20px;
 }
 
+#Signup-password, #Signup-name, #Signup-phone{
+  margin-top: 8px;
+}
+
 #SignupForm-Signup_btn, #SignupForm-Login_btn{
   height: 40px;
   width: 305px;
@@ -32,6 +36,7 @@
   font-weight: 500;
   line-height: normal;
   letter-spacing: -0.48px;
+  margin-top: 10px;
 }
 
 #SignupForm-Signup_btn{
@@ -40,13 +45,11 @@
 
 #SignupForm-Login_btn{
   background: #27272B;
-  margin-top: 10px;
 }
 
 /*유효성 검사 메시지*/
 .signup-error{
-  height: 20px;
-  margin-top: 3px;
+  margin-top: 2px;
   margin-left: 10px;
   font-size: 10px;
   color: red;

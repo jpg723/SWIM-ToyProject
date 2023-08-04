@@ -37,7 +37,7 @@ function SignupForm({
           id="Signup-id"
           type="text"
           placeholder="ID"
-          aria-invalid={!isDirty ? undefined : errors.id ? "true" : "false"}
+          aria-invalid={!isDirty ? undefined : errors.id ? '#ff0000' : '#dadada'}
           {...register("id", {
             required: "ID는 필수 입력입니다.",
           })}
