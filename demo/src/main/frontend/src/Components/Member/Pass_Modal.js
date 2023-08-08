@@ -92,7 +92,7 @@ export const Modal = ({ ID_ShowModal, ID_SetShowModal }) => {
           <animated.div style={animation}>
             <ModalWrapper ID_ShowModal={ID_ShowModal}>
               <ModalContent>
-                <h1>Forgot your ID?</h1>
+                <h1>Forgot your PassWord?</h1>
                 <p>dddddddd</p>
                 <button>Search</button>
               </ModalContent>

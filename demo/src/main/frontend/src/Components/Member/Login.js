@@ -16,6 +16,8 @@ function Login() {
   return (
     <div className="Login-body">
       <div className="Login-box">
+        {/* 아이디 찾기, 비번찾기  */}
+      <Modal ID_ShowModal={ID_ShowModal} ID_SetShowModal={ID_SetShowModal}/>
         <Link to="/" id="Login-box-back_btn">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -44,13 +46,12 @@ function Login() {
             <div id="login-search-id">
               <text class="login-search-text1">Forgot your</text>
               <text onClick={openModal}>ID?</text>
-              <Modal ID_ShowModal={ID_ShowModal} ID_SetShowModal={ID_SetShowModal}/>
             </div>
           </div>
           <div id="login-search-pw">
             <div id="login-search-pw">
               <text class="login-search-text1">Forgot your</text>
-              <text>PassWord?</text>
+              <text onClick={openModal}>PassWord?</text>
             </div>
           </div>
         </div>
