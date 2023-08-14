@@ -4,7 +4,6 @@ import { animated, useSpring } from "react-spring";
 import styled from "styled-components";
 
 const Background = styled.div`
-  opacity: 0.9;
   position: fixed;
   display: flex;
   justify-content: center;
@@ -32,13 +31,19 @@ const ModalContent = styled.div`
   color: #141414;
 
   button {
+    margin-top: 40px;
     padding: 10px 24px;
     background: #93B7FF;
     border-radius: 10px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     color: #fff;
     border: none;
-    back
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: -0.48px;
+    padding-left: 20px;
   }
 `;
 
@@ -93,7 +98,8 @@ export const Modal = ({ ID_ShowModal, ID_SetShowModal }) => {
             <ModalWrapper ID_ShowModal={ID_ShowModal}>
               <ModalContent>
                 <h1>Forgot your ID?</h1>
-                <p>dddddddd</p>
+                <input id="id" type="text" placeholder="Name" />
+                <input id="id" type="text" placeholder="Phone-Number" />
                 <button>Search</button>
               </ModalContent>
               <CloseModalButton
