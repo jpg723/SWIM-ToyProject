@@ -90,13 +90,8 @@
 .quill {
   margin-top: 10px;
 }
-
 #WriteForm-2-info-btns {
-}
-#WriteForm-2-info-btns {
-  display: flex;
   padding-top: 10px;
-  padding-left: 590px;
 }
 #WriteForm-2-info-btns-cancle {
   width: 120px;
