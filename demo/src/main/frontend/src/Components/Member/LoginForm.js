@@ -1,11 +1,43 @@
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import "./LoginForm.css";
+import axios from 'axios'; 
 
 function LoginForm({
-  onSubmit = async (data) => {
+  /*onSubmit = async (data) => {
     await new Promise((r) => setTimeout(r, 1000));
-    alert(JSON.stringify(data));
+    axios({
+        url: '/member/login',
+        method: 'post',
+        data: {
+            data1: data.id, data2: data.password
+        } , 
+        baseURL: 'http://localhost:8080',
+      }
+      
+    ).then(function (response) {
+          console.log(response.data);
+        }
+      );
+      alert(data.id);
+  }*/
+
+  /*로그인 버튼 클릭시*/
+  onSubmit = async (data) => {        
+    axios(
+        {
+        url: '/member/login',
+        method: 'post',
+        data: {
+            data1: data.email ,data2: data.password
+        } , 
+        baseURL: 'http://localhost:8080',
+        }
+    ).then(function (response) {
+        console.log(response.data);
+      }
+    );
+    console.log(data.email);
   }
 }) {
   const {
