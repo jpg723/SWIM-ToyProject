@@ -21,12 +21,12 @@ function LoginForm({
           id="id"
           type="text"
           placeholder="ID"
-          aria-invalid={!isDirty ? undefined : errors.email ? "true" : "false"}
+          aria-invalid={!isDirty ? undefined : errors.id ? "true" : "false"}
           {...register("email", {
             required: "ID는 필수 입력입니다.",
           })}
         />
-        <div class="login-error">{errors.email && <small role="alert">{errors.email.message}</small>}</div>
+        <div class="login-error">{errors.id && <small role="alert">{errors.id.message}</small>}</div>
       </div>
 
       <div>

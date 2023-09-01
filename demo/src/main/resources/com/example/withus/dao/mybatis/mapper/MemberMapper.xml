@@ -5,7 +5,7 @@
   <cache />
 
    <insert id="registerMember">
-      INSERT INTO MEMBER(USER_ID, PASSWORD, NAME, PHONE)
+      INSERT INTO MEMBER(USER_ID, PASSWORD, USER_NAME, PHONE)
       VALUES(#{user_id}, #{password}, #{user_name}, #{phone})
    </insert>
 
