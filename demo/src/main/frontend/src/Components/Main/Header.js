@@ -1,13 +1,14 @@
 import { Outlet } from "react-router";
 import { Link } from "react-router-dom";
 import "./Header.css";
+import logo from "../../img/swimming.png";
 
 function Header() {
   return (
     <div>
       <div id="Header">
+      <div id="logo-image"><img src={logo} id="logo-image-swim"></img></div>
         <Link to="/" id="header-content1">
-          <div id="logo-image"></div>
           <text id="logo-text">SWIM</text>
         </Link>
         <div id="header-content2">
