@@ -7,7 +7,6 @@
 }
 
 #Member-logo-image {
-  border: 1px solid black;
   width: 50px;
 }
 
@@ -16,4 +15,5 @@
   color: #93b7ff;
   font-size: 35px;
   margin-left: 10px;
+  margin-top: 5px;
 }
