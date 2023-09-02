@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -15,6 +16,7 @@ import com.example.demo.service.MemberService;
 
 @RestController
 @RequestMapping("/member")
+@Component
 public class MemberController {
 	
 	@Autowired
@@ -44,14 +46,16 @@ public class MemberController {
     }
     //로그인
     @RequestMapping(value="/login", method=RequestMethod.POST)
+
     public Member Login (@RequestBody Map<String, Object> paramMap) {
         String[] loginInfo = new String[2];
         int i = 0;
         for (Map.Entry<String, Object> pair : paramMap.entrySet()) {
             loginInfo[i] = pair.getValue().toString();
-            System.out.println(loginInfo[i]);
             i++;
         }
+        System.out.println(loginInfo[0]);
+        System.out.println(loginInfo[1]);
         return memberService.findByIdAndPassword(loginInfo[0], loginInfo[1]);
     }
 }

@@ -1,5 +1,7 @@
 package com.example.demo.service;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.dao.MemberDao;
@@ -14,12 +16,13 @@ public class MemberServiceImpl implements MemberService {
 
 	@Override /*회원가입*/
 	public void registerMember(Member member) {
+
 		memberDao.registerMember(member);
 	}
+
 	@Override
 	public Member findByIdAndPassword(String user_id, String password) {
 		// TODO Auto-generated method stub
 		return memberDao.findByIdAndPassword(user_id, password);
 	}
-
 }

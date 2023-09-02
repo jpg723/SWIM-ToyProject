@@ -1,11 +1,25 @@
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import "./LoginForm.css";
+import axios from 'axios'; 
 
 function LoginForm({
   onSubmit = async (data) => {
     await new Promise((r) => setTimeout(r, 1000));
-    alert(JSON.stringify(data));
+    axios(
+      {
+        url: '/member/login',
+        method: 'post',
+        data: {
+          user_id: data.id, password: data.password
+        } , 
+        baseURL: 'http://localhost:8080',
+      }
+    ).then(function (response) {
+      console.log(response.data);
+    });
+
+    alert("백엔드 전달");
   }
 }) {
   const {
@@ -22,7 +36,7 @@ function LoginForm({
           type="text"
           placeholder="ID"
           aria-invalid={!isDirty ? undefined : errors.id ? "true" : "false"}
-          {...register("email", {
+          {...register("id", {
             required: "ID는 필수 입력입니다.",
           })}
         />

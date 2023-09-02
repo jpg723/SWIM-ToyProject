@@ -4,12 +4,12 @@
 <mapper namespace="com.example.demo.dao.mybatis.mapper.MemberMapper">
   <cache />
 
-   <insert id="registerMember">
+    <insert id="registerMember">
       INSERT INTO MEMBER(USER_ID, PASSWORD, USER_NAME, PHONE)
       VALUES(#{user_id}, #{password}, #{user_name}, #{phone})
-   </insert>
+    </insert>
 
-    <select id="findByIdAndPassword">
+    <select id="findByIdAndPassword" resultType="com.example.demo.domain.Member">
         SELECT *
         FROM MEMBER
         WHERE USER_ID = #{user_id}
