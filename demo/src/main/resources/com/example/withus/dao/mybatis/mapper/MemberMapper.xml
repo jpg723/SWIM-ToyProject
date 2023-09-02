@@ -12,8 +12,8 @@
     <select id="findByIdAndPassword" resultType="com.example.demo.domain.Member">
         SELECT *
         FROM MEMBER
-        WHERE USER_ID = #{user_id}
-        AND PASSWORD = #{password}
+        WHERE USER_ID = #{user_id, jdbcType=VARCHAR}
+        AND PASSWORD = #{password, jdbcType=VARCHAR}
     </select>
 </mapper>
 

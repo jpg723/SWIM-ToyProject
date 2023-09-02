@@ -1,6 +1,7 @@
 package com.example.demo.dao.mybatis;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Repository;
 

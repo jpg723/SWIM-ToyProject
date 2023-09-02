@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useRef } from "react";
 import { MdClose } from "react-icons/md";
 import { animated, useSpring } from '@react-spring/web';
+import { animated, useSpring } from "@react-spring/web";
 import styled from "styled-components";
 
 const Background = styled.div`
