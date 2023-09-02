@@ -6,6 +6,20 @@ import axios from 'axios';
 function LoginForm({
   /*onSubmit = async (data) => {
     await new Promise((r) => setTimeout(r, 1000));
+    axios(
+      {
+        url: '/member/login',
+        method: 'post',
+        data: {
+          user_id: data.id, password: data.password
+        } , 
+        baseURL: 'http://localhost:8080',
+      }
+    ).then(function (response) {
+      console.log(response.data);
+    });
+
+    alert("백엔드 전달");
     axios({
         url: '/member/login',
         method: 'post',
@@ -53,12 +67,12 @@ function LoginForm({
           id="id"
           type="text"
           placeholder="ID"
-          aria-invalid={!isDirty ? undefined : errors.email ? "true" : "false"}
-          {...register("email", {
+          aria-invalid={!isDirty ? undefined : errors.id ? "true" : "false"}
+          {...register("id", {
             required: "ID는 필수 입력입니다.",
           })}
         />
-        <div class="login-error">{errors.email && <small role="alert">{errors.email.message}</small>}</div>
+        <div class="login-error">{errors.id && <small role="alert">{errors.id.message}</small>}</div>
       </div>
 
       <div>

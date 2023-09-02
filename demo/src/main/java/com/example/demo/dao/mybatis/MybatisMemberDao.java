@@ -26,4 +26,6 @@ public class MybatisMemberDao implements MemberDao {
 		// TODO Auto-generated method stub
 		return memberMapper.findByIdAndPassword(user_id, password);
 	}
+
+
 }
