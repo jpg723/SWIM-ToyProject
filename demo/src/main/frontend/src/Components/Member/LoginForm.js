@@ -4,54 +4,35 @@ import "./LoginForm.css";
 import axios from 'axios'; 
 
 function LoginForm({
-  /*onSubmit = async (data) => {
-    await new Promise((r) => setTimeout(r, 1000));
-    axios(
-      {
-        url: '/member/login',
-        method: 'post',
-        data: {
-          user_id: data.id, password: data.password
-        } , 
-        baseURL: 'http://localhost:8080',
-      }
-    ).then(function (response) {
-      console.log(response.data);
-    });
-
-    alert("백엔드 전달");
-    axios({
-        url: '/member/login',
-        method: 'post',
-        data: {
-            data1: data.id, data2: data.password
-        } , 
-        baseURL: 'http://localhost:8080',
-      }
-      
-    ).then(function (response) {
-          console.log(response.data);
-        }
-      );
-      alert(data.id);
-  }*/
 
   /*로그인 버튼 클릭시*/
-  onSubmit = async (data) => {        
+  onSubmit = async (data) => {  
+
     axios(
         {
         url: '/member/login',
         method: 'post',
         data: {
-            data1: data.email ,data2: data.password
+            user_id: data.id , password: data.password
         } , 
         baseURL: 'http://localhost:8080',
         }
     ).then(function (response) {
-        console.log(response.data);
+        if (response.data.user_id === undefined) {
+          alert("입력하신 아이디 또는 비밀번호가 일치하지 않습니다");
+        }
+        else if(response.data.password === undefined){
+          alert("입력하신 아이디 또는 비밀번호가 일치하지 않습니다");
+        }
+        else{
+
+          alert(response.data.user_name+"님 환영합니다!");
+          //sessionStorage.setItem("id", response.data.user_id); // sessionStorage에 id라는 key 값으로 저장
+          //sessionStorage.setItem("name", response.data.user_name);
+          document.location.href = "/";
+        }
       }
     );
-    console.log(data.email);
   }
 }) {
   const {
