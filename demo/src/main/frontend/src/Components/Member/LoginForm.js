@@ -27,8 +27,8 @@ function LoginForm({
         else{
 
           alert(response.data.user_name+"님 환영합니다!");
-          //sessionStorage.setItem("id", response.data.user_id); // sessionStorage에 id라는 key 값으로 저장
-          //sessionStorage.setItem("name", response.data.user_name);
+          sessionStorage.setItem("id", response.data.user_id); // sessionStorage에 id라는 key 값으로 저장
+          sessionStorage.setItem("name", response.data.user_name);
           document.location.href = "/";
         }
       }
