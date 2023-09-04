@@ -2,7 +2,7 @@ import { Outlet } from "react-router";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import logo from "../../img/swimming.png";
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useRecoilState } from "recoil";
 import { loginAtom } from "../../atoms";
 
