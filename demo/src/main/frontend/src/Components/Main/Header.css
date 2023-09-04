@@ -9,13 +9,20 @@
 /*로고-------------------------------------------------*/
 #header-content1{
     display: flex;
-    margin: auto 0px auto 35px; 
+    margin: auto 0px auto 0px; 
     text-decoration-line: none;
 }
 
 #logo-image{
-    border: 1px solid black;
+    margin-bottom: 10px;
     width: 50px;
+    margin-left: 20px;
+}
+
+#logo-image-swim{
+    width: 45px;
+    margin-top: 25px;
+    margin-right: 0px;
 }
 
 #logo-text{

@@ -17,7 +17,7 @@ function SignupForm({
         baseURL: 'http://localhost:8080',
       }
     ).then(function (response) {
-      console.log(response.data);
+      document.location.href = "/login";
     });
 
     alert("백엔드 전달");
