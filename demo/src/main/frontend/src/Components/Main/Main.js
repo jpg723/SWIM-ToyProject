@@ -3,7 +3,6 @@ import { ReactComponent as Polygon} from "../../svg/Polygon 1.svg";
 import { ReactComponent as Arrow} from "../../svg/Arrow 1.svg";
 import { Link } from "react-router-dom";
 
-
 function Main() {
 
     return (
