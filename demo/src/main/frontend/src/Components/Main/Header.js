@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Header.css";
 import logo from "../../img/swimming.png";
 import profile from "../../img/profile.png";
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useRecoilState } from "recoil";
 import { loginAtom } from "../../atoms";
 
@@ -23,6 +23,25 @@ function Header() {
     }
   });
 
+  /*프로필 클릭 시 */
+  const [profile_open, setProfile_open] = useState(false);
+
+  function profile_modal() {
+
+    if(profile_open == false && login == true)
+      setProfile_open(true);
+    else
+      setProfile_open(false);
+  }
+
+  /*로그아웃 클릭 시 */
+  function logout(){
+    sessionStorage.removeItem("id");
+    sessionStorage.removeItem("name");
+    setLogin(false);
+    setProfile_open(false);
+  }
+
   return (
     <div>
       <div id="Header">
@@ -36,10 +55,20 @@ function Header() {
           </Link>
 
           {login ? 
-          (<div id="header_profile"><img src={profile} id="image-profile"></img></div>)
-          :(<Link to="/login" id="header-botton-box2">
-            <button id="login-btn">Log in</button>
-          </Link>)
+            (<div id="header_profile" onClick={profile_modal}><img src={profile} id="image-profile"></img></div>)
+            :(<Link to="/login" id="header-botton-box2">
+              <button id="login-btn">Log in</button>
+            </Link>)
+          }
+
+          {profile_open ? 
+            (<div id="profile_modal">
+              <span class="profile_list">내 작성글</span>
+              <span class="profile_list">내 관심글</span>
+              <span class="profile_list">내 정보 수정</span>
+              <span class="profile_list" onClick={logout}>로그아웃</span>
+            </div>)
+            :(<div></div>)
           }
         </div>
       </div>
