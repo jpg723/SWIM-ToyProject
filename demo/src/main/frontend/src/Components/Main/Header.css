@@ -51,3 +51,16 @@
     font-size: 15px;
 }
 
+/*로그인 시 프로필*/
+#header_profile{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-left: 30px;
+}
+
+#image-profile{
+    width: 42px;
+    height: 42px;
+    border-radius: 20px;
+}
