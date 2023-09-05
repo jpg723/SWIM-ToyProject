@@ -87,4 +87,9 @@
     margin: 10px auto;
     border-radius: 10px;
     background: #F2F2F2;
+    cursor: pointer;
+}
+
+.profile_list:hover{
+    background: #93B7FF;
 }

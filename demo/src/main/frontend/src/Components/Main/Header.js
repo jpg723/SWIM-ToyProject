@@ -28,7 +28,7 @@ function Header() {
 
   function profile_modal() {
 
-    if(profile_open == false && login == true)
+    if(profile_open === false && login === true)
       setProfile_open(true);
     else
       setProfile_open(false);
@@ -36,8 +36,7 @@ function Header() {
 
   /*로그아웃 클릭 시 */
   function logout(){
-    sessionStorage.removeItem("id");
-    sessionStorage.removeItem("name");
+    sessionStorage.clear();
     setLogin(false);
     setProfile_open(false);
   }
