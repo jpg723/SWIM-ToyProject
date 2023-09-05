@@ -55,7 +55,7 @@ public class MemberController {
             i++;
         }
         System.out.println(loginInfo[0]);
-        System.out.println(loginInfo[1]);L
+        System.out.println(loginInfo[1]);
         return memberService.findByIdAndPassword(loginInfo[0], loginInfo[1]);
     }
 }
