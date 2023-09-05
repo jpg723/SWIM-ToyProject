@@ -49,9 +49,14 @@ function Header() {
           <text id="logo-text">SWIM</text>
         </Link>
         <div id="header-content2">
-          <Link to="/write-form" id="header-botton-box1">
+          {login ? 
+            (<Link to="/write-form" id="header-botton-box1">
             <button id="new-wirte-btn">새 글쓰기</button>
-          </Link>
+            </Link>)
+              :(<Link to="/login" id="header-botton-box1">
+              <button id="new-wirte-btn">새 글쓰기</button>
+            </Link>)
+          }
 
           {login ? 
             (<div id="header_profile" onClick={profile_modal}><img src={profile} id="image-profile"></img></div>)
