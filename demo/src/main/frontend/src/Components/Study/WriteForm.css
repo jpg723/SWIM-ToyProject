@@ -64,6 +64,35 @@
   text-align: center;
 }
 
+/*지역 미지정 시*/
+#undefined_region{
+  display: flex;
+  border: 2px solid #ff9c9c;
+  text-align: center;
+  width: 200px;
+  height: 40px;
+  border-radius: 15px;
+  font-size: 16px;
+}
+
+/*제목 입력 박스*/
+#WriteForm-2-info-title_input {
+  height: 10px;
+  width: 978px;
+  border: 1px solid #c6c6c6;
+  font-size: 18px;
+  padding: 20px;
+}
+
+/*제목 미지정 시*/
+#undefined_title{
+  height: 10px;
+  width: 978px;
+  border: 2px solid #ff9c9c;
+  font-size: 18px;
+  padding: 20px;
+}
+
 /* 스터디를 소개해주세요 */
 #WriteForm-2-info {
   margin: 20px 40px 20px 40px;
@@ -79,16 +108,12 @@
   font-weight: 500;
 }
 
-/*제목 입력 박스*/
-#WriteForm-2-info-title_input {
-  height: 10px;
-  width: 978px;
-  border: 1px solid #c6c6c6;
-  font-size: 18px;
-  padding: 20px;
+#quill {
+  margin-top: 10px;
+  height: 400px;
 }
 
-.quill {
+#undefined_content {
   margin-top: 10px;
   height: 400px;
 }
