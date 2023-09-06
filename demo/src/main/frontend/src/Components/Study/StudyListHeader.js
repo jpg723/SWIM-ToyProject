@@ -1,6 +1,12 @@
 import React from 'react'
 import './StudyListHeader.css';
 import search_btn from '../../svg/search_btn.png';
+import language_icon from '../../img/language-icon.png';
+import company_icon from '../../img/company-icon.png';
+import studying_icon from '../../img/studying-icon.png';
+import programming_icon from '../../img/programming-icon.png';
+import hobby_icon from '../../img/hobbies-icon.png';
+import etc_icon from '../../img/etc-icon.png';
 
 function StudyList() {
   return (
@@ -31,12 +37,12 @@ function StudyList() {
       <div class="study-list-line"></div>
       {/*헤더2 */}
       <div id="study-list-tag">
-          <button class="study-tag"><div class="study-tag-content"><img class="study-tag-img"></img><div class="study-tag-text">어학</div></div></button>
-          <button class="study-tag"><div class="study-tag-content"><img class="study-tag-img"></img><div class="study-tag-text">취업</div></div></button>
-          <button class="study-tag"><div class="study-tag-content"><img class="study-tag-img"></img><div class="study-tag-text">고시/공무원</div></div></button>
-          <button class="study-tag"><div class="study-tag-content"><img class="study-tag-img"></img><div class="study-tag-text">취미/교양</div></div></button>
-          <button class="study-tag"><div class="study-tag-content"><img class="study-tag-img"></img><div class="study-tag-text">프로그래밍</div></div></button>
-          <button class="study-tag"><div class="study-tag-content"><img class="study-tag-img"></img><div class="study-tag-text">기타</div></div></button>
+          <button class="study-tag"><div class="study-tag-content"><img class="study-tag-img" src={language_icon}></img><div class="study-tag-text">어학</div></div></button>
+          <button class="study-tag"><div class="study-tag-content"><img class="study-tag-img" src={company_icon}></img><div class="study-tag-text">취업</div></div></button>
+          <button class="study-tag"><div class="study-tag-content"><img class="study-tag-img" src={studying_icon}></img><div class="study-tag-text">고시/공무원</div></div></button>
+          <button class="study-tag"><div class="study-tag-content"><img class="study-tag-img" src={hobby_icon}></img><div class="study-tag-text">취미/교양</div></div></button>
+          <button class="study-tag"><div class="study-tag-content"><img class="study-tag-img" src={programming_icon}></img><div class="study-tag-text">프로그래밍</div></div></button>
+          <button class="study-tag"><div class="study-tag-content"><img class="study-tag-img" src={etc_icon}></img><div class="study-tag-text">기타</div></div></button>
       </div>
     </div>
   )

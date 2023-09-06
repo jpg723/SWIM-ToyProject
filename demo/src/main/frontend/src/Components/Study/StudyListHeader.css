@@ -141,6 +141,7 @@
 /*태그 헤더---------------------------------*/
 #study-list-tag{
     margin: 20px auto;
+    padding: 0 40px;
 }
 
 .study-tag{
@@ -149,7 +150,7 @@
     border-radius: 30px;
     border: 1px solid #788088;
     text-align: left;
-    margin-left: 40px;
+    margin-left: 20px;
 }
 
 .study-tag-content{
@@ -158,12 +159,9 @@
 
 /*태그 이미지*/
 .study-tag-img{
-    border: 1px solid black;
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
-    margin-top: auto;
-    margin-left: 5px;
+    width: 37px;
+    height: 37px;
+    margin: auto 0px auto 10px;
 }
 
 .study-tag-text{
@@ -171,6 +169,6 @@
     height: 35px;
     margin-top: 9px;
     margin-bottom: auto;
-    margin-left: 15px;
+    margin-left: 10px;
     margin-right: 10px;
 }
