@@ -3,19 +3,83 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import "./WriteForm.css";
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios'; 
 
 function WriteForm() {
 
-  const [study_num, setStudy_num] = useState("undefined");
+  /*카테고리*/
+  const [study_category, setStudy_category] = useState("language");
 
-  const handleSelect = (e) => {
+  const Select_studyCategory = (e) => {
+    setStudy_category(e.target.value);
+  }
+
+  /*인원 수*/
+  const [studyNum_state, setStudyNum_state] = useState("Undefined");
+  const [study_num, setStudy_num] = useState(0);
+
+  const StudyNum_state = (e) => {
+    setStudyNum_state(e.target.value);
+  };
+
+  const Select_studyNum = (e) => {
     setStudy_num(e.target.value);
   };
 
-  /*취소 버튼 클릭시 */
+  /*온오프라인*/
+  const [study_onoff, setStudy_onoff] = useState("on");
+
+  const Select_studyOnoff = (e) => {
+    setStudy_onoff(e.target.value);
+  }
+
+  /*지역*/
+  const [study_region, setStudy_region] = useState("전체");
+
+  const Select_studyRegion = (e) => {
+    setStudy_region(e.target.value);
+  }
+
+  /*제목*/
+  const [study_title, setStudy_title] = useState("");
+
+  const Select_studyTitle = (e) => {
+    setStudy_title(e.target.value);
+  }
+
+  /*내용*/
+  const [study_content, setStudy_content] = useState("");
+
+  const Select_studyContent = (value) => {
+    setStudy_content(value);
+  };
+
+  /*취소 버튼 클릭시*/
   const navigate = useNavigate();
   function write_cancle(){
-    navigate(`/`);
+    navigate('/study-list');
+  }
+
+  /*등록 버튼 클릭시*/
+  function write_save(){
+    const date = new Date();
+    axios(
+      {
+        url: '/study/register',
+        method: 'post',
+        data: {
+          data1: study_title, data2: study_category, data3: study_num, data4: study_onoff,
+          data5: study_region, data6: sessionStorage.getItem("id"), data7: study_content,
+          data8: date.toLocaleDateString()
+        } , 
+        baseURL: 'http://localhost:8080',
+      }
+    ).then(function (response) {
+      document.location.href = "/study-list";
+    });
+
+    alert("백엔드 전달");
+    console.log(study_category, study_num, study_onoff, study_region, study_title, study_content);
   }
 
   // 지역 value도 한글로 전달
@@ -44,7 +108,7 @@ function WriteForm() {
         <div id="WriteForm-1txt-info">
           <div id="WriteForm-1txt-info-select">
             <text id="WriteForm-option">카테고리</text>
-            <select id="WriteForm-option_value">
+            <select id="WriteForm-option_value" onChange={Select_studyCategory} value={study_category}>
               <option value="language">어학</option>
               <option value="employment">취업</option>
               <option value="gosi">고시/공무원</option>
@@ -56,13 +120,13 @@ function WriteForm() {
 
           <div id="WriteForm-1txt-info-select">
             <text id="WriteForm-option">모집인원</text>
-            <select id="WriteForm-option_value" onChange={handleSelect} value={study_num}>
+            <select id="WriteForm-option_value" onChange={StudyNum_state} value={studyNum_state}>
               <option value="Undefined">인원 미정</option>
               <option value="direct">직접 입력</option>
             </select>
           </div>
-          {study_num === "direct" ?
-          (<div id="WriteForm-1txt-info-select">
+          {studyNum_state === "direct" ?
+          (<div id="WriteForm-1txt-info-select" onChange={Select_studyNum} value={study_num}>
             <input type="text" id="selboxDirect" name="selboxDirect"/>
           </div>):(<div></div>)
           }
@@ -70,7 +134,7 @@ function WriteForm() {
         <div id="WriteForm-1txt-info">
           <div id="WriteForm-1txt-info-select">
             <text id="WriteForm-option">진행방식</text>
-            <select id="WriteForm-option_value">
+            <select id="WriteForm-option_value" onChange={Select_studyOnoff} value={study_onoff}>
               <option value="on">온라인</option>
               <option value="off">오프라인</option>
             </select>
@@ -78,7 +142,7 @@ function WriteForm() {
 
           <div id="WriteForm-1txt-info-select">
             <text id="WriteForm-option">지역</text>
-            <select id="WriteForm-option_value">
+            <select id="WriteForm-option_value" onChange={Select_studyRegion} value={study_region}>
               {
               region_option.map(function (a) {
                 return(
@@ -93,7 +157,7 @@ function WriteForm() {
       <div className="WriteForm-2">
         <div id="WriteForm-1txt">스터디를 소개해주세요.</div>
         <div id="WriteForm-2-info">
-          <div>
+          <div onChange={Select_studyTitle} value={study_title}>
             <input
               type="text"
               placeholder="제목을 입력해주세요"
@@ -102,11 +166,11 @@ function WriteForm() {
           </div>
 
           <div id="quill">
-            <ReactQuill />
+            <ReactQuill onChange={Select_studyContent} value={study_content}/>
           </div>
           <div id="WriteForm-2-info-btns">
             <button id="WriteForm-2-info-btns-cancle" onClick={write_cancle}>취소</button>
-            <button id="WriteForm-2-info-btns-save">등록</button>
+            <button id="WriteForm-2-info-btns-save" onClick={write_save}>등록</button>
           </div>
         </div>
       </div>
