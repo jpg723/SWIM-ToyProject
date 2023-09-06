@@ -63,17 +63,8 @@ function WriteForm() {
   /*등록 버튼 클릭시*/
   function write_save(){
     const date = new Date();
-    
-    if(study_region === "전체")
-      alert("지역을 선택해주세요");
 
-    else if(study_title === "")
-      alert("제목을 입력해주세요");
-
-    else if(study_content === "")
-      alert("내용을 입력해주세요");
-
-    else{
+    if(study_region !== "전체" && study_title !== "" && study_content !== ""){
       axios(
         {
           url: '/study/register',
@@ -88,6 +79,12 @@ function WriteForm() {
       ).then(function (response) {
         document.location.href = "/study-list";
       });
+    }
+
+    else {
+      alert("입력폼 확인");
+        
+
     }
   }
 
@@ -149,18 +146,18 @@ function WriteForm() {
             </select>
           </div>
 
-          <div id="WriteForm-1txt-info-select">
+          {study_region === "전체" ? (<div id="WriteForm-1txt-info-select">
             <text id="WriteForm-option">지역</text>
             <select id="WriteForm-option_value" onChange={Select_studyRegion} value={study_region}>
               {
-              region_option.map(function (a) {
-                return(
-                  <option value={a}>{a}</option>
-                )
-              })
+                region_option.map(function (a) {
+                  return(
+                    <option value={a}>{a}</option>
+                  )
+                })
               }
             </select>
-          </div>
+          </div>) : <div></div>}
         </div>
       </div>
       <div className="WriteForm-2">
