@@ -8,7 +8,7 @@ import axios from 'axios';
 function WriteForm() {
 
   /*카테고리*/
-  const [study_category, setStudy_category] = useState("language");
+  const [study_category, setStudy_category] = useState("어학");
 
   const Select_studyCategory = (e) => {
     setStudy_category(e.target.value);
@@ -27,7 +27,7 @@ function WriteForm() {
   };
 
   /*온오프라인*/
-  const [study_onoff, setStudy_onoff] = useState("on");
+  const [study_onoff, setStudy_onoff] = useState("온라인");
 
   const Select_studyOnoff = (e) => {
     setStudy_onoff(e.target.value);
@@ -63,23 +63,32 @@ function WriteForm() {
   /*등록 버튼 클릭시*/
   function write_save(){
     const date = new Date();
-    axios(
-      {
-        url: '/study/register',
-        method: 'post',
-        data: {
-          data1: study_title, data2: study_category, data3: study_num, data4: study_onoff,
-          data5: study_region, data6: sessionStorage.getItem("id"), data7: study_content,
-          data8: date.toLocaleDateString()
-        } , 
-        baseURL: 'http://localhost:8080',
-      }
-    ).then(function (response) {
-      document.location.href = "/study-list";
-    });
+    
+    if(study_region === "전체")
+      alert("지역을 선택해주세요");
 
-    alert("백엔드 전달");
-    console.log(study_category, study_num, study_onoff, study_region, study_title, study_content);
+    else if(study_title === "")
+      alert("제목을 입력해주세요");
+
+    else if(study_content === "")
+      alert("내용을 입력해주세요");
+
+    else{
+      axios(
+        {
+          url: '/study/register',
+          method: 'post',
+          data: {
+            data1: study_title, data2: study_category, data3: study_num, data4: study_onoff,
+            data5: study_region, data6: sessionStorage.getItem("id"), data7: study_content,
+            data8: date.toLocaleDateString()
+          } , 
+          baseURL: 'http://localhost:8080',
+        }
+      ).then(function (response) {
+        document.location.href = "/study-list";
+      });
+    }
   }
 
   // 지역 value도 한글로 전달
@@ -109,12 +118,12 @@ function WriteForm() {
           <div id="WriteForm-1txt-info-select">
             <text id="WriteForm-option">카테고리</text>
             <select id="WriteForm-option_value" onChange={Select_studyCategory} value={study_category}>
-              <option value="language">어학</option>
-              <option value="employment">취업</option>
-              <option value="gosi">고시/공무원</option>
-              <option value="hobby">취미/교양</option>
-              <option value="program">프로그래밍</option>
-              <option value="etc">타</option>
+              <option value="어학">어학</option>
+              <option value="취업">취업</option>
+              <option value="고시/공무원">고시/공무원</option>
+              <option value="취미/교양">취미/교양</option>
+              <option value="프로그래밍">프로그래밍</option>
+              <option value="기타">기타</option>
             </select>
           </div>
 
@@ -135,8 +144,8 @@ function WriteForm() {
           <div id="WriteForm-1txt-info-select">
             <text id="WriteForm-option">진행방식</text>
             <select id="WriteForm-option_value" onChange={Select_studyOnoff} value={study_onoff}>
-              <option value="on">온라인</option>
-              <option value="off">오프라인</option>
+              <option value="온라인">온라인</option>
+              <option value="오프라인">오프라인</option>
             </select>
           </div>
 
