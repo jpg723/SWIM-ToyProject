@@ -6,9 +6,9 @@
 
     <insert id="registerStudy">
       INSERT INTO STUDY(STUDY_ID, STUDY_TITLE, STUDY_CATEGORY, STUDY_NUM,
-        STUDY_ONOFF, STUDY_REGION, WRITER, STUDY_CONTENT, STUDY_CREATE_DATE)
+        STUDY_ONOFF, STUDY_REGION, WRITER, STUDY_CONTENT, STUDY_CREATE_DATE, STUDY_STATE)
       VALUES(study_seq.NEXTVAL, #{study_title}, #{study_category}, #{study_num}, #{study_onoff},
-      #{study_region}, #{writer}, #{study_content}, #{study_create_date})
+      #{study_region}, #{writer}, #{study_content}, #{study_create_date}, #{study_state})
     </insert>
 </mapper>
 

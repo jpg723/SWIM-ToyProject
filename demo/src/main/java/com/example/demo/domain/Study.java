@@ -6,8 +6,9 @@ import java.util.Date;
 @SuppressWarnings("serial")
 public class Study implements Serializable{
 	
-	private String study_id, study_title, study_category, study_onoff,
-			study_region, writer, study_content, study_create_date, study_update_date;
+	private String study_id, study_title, study_category, study_onoff
+			, study_region, writer, study_content
+			, study_create_date, study_update_date, study_state;
 	private int study_num;
 
 	public String getStudy_id() {
@@ -89,6 +90,14 @@ public class Study implements Serializable{
 		this.study_update_date = study_update_date;
 	}
 
+	public String getStudy_state() {
+		return study_state;
+	}
+
+	public void setStudy_state(String study_state) {
+		this.study_state = study_state;
+	}
+
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
@@ -108,6 +117,8 @@ public class Study implements Serializable{
 		builder.append(writer);
 		builder.append(", study_content=");
 		builder.append(study_content);
+		builder.append(", study_state=");
+		builder.append(study_state);
 		builder.append("]");
 		return builder.toString();
 	}

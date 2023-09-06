@@ -24,7 +24,7 @@ public class StudyController {
     @ResponseBody
     @RequestMapping(value="/register", method=RequestMethod.POST)
     public Study registerStudy(HttpServletRequest request, @RequestBody Map<String, Object> paramMap) throws ParseException {
-       String[] studyInfo = new String[8];
+       String[] studyInfo = new String[9];
        int i = 0;
 
        for (Map.Entry<String, Object> pair : paramMap.entrySet())
@@ -41,6 +41,7 @@ public class StudyController {
        study.setWriter(studyInfo[5]);
        study.setStudy_content(studyInfo[6]);
        study.setStudy_create_date(studyInfo[7]);
+       study.setStudy_state(studyInfo[8]);
 
        System.out.println(study);
        studyService.registerStudy(study);
