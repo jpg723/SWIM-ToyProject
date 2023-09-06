@@ -35,6 +35,7 @@ function WriteForm() {
 
   /*지역*/
   const [study_region, setStudy_region] = useState("전체");
+  const [region_state, setRegion_state] = useState(false);
 
   const Select_studyRegion = (e) => {
     setStudy_region(e.target.value);
@@ -42,6 +43,7 @@ function WriteForm() {
 
   /*제목*/
   const [study_title, setStudy_title] = useState("");
+  const [title_state, setTitle_state] = useState(false);
 
   const Select_studyTitle = (e) => {
     setStudy_title(e.target.value);
@@ -64,7 +66,7 @@ function WriteForm() {
   function write_save(){
     const date = new Date();
 
-    if(study_region !== "전체" && study_title !== "" && study_content !== ""){
+    if(study_region !== "전체" && study_title !== ""){
       axios(
         {
           url: '/study/register',
@@ -83,8 +85,15 @@ function WriteForm() {
 
     else {
       alert("입력폼 확인");
-        
+      if(study_region === "전체")
+        setRegion_state(true);
+      else
+        setRegion_state(false);
 
+      if(study_title === "")
+        setTitle_state(true);
+      else
+        setTitle_state(false);
     }
   }
 
@@ -146,39 +155,41 @@ function WriteForm() {
             </select>
           </div>
 
-          {study_region === "전체" ? (<div id="WriteForm-1txt-info-select">
+          <div id="WriteForm-1txt-info-select">
             <text id="WriteForm-option">지역</text>
-            <select id="WriteForm-option_value" onChange={Select_studyRegion} value={study_region}>
-              {
-                region_option.map(function (a) {
-                  return(
-                    <option value={a}>{a}</option>
-                  )
-                })
-              }
-            </select>
-          </div>) : <div></div>}
+              <select id={region_state ? "undefined_region" : "WriteForm-option_value"} 
+                onChange={Select_studyRegion} value={study_region}>
+                {
+                  region_option.map(function (a) {
+                    return(
+                      <option value={a}>{a}</option>
+                    )
+                  })
+                }
+              </select>
+          </div>
         </div>
       </div>
+
       <div className="WriteForm-2">
         <div id="WriteForm-1txt">스터디를 소개해주세요.</div>
         <div id="WriteForm-2-info">
           <div onChange={Select_studyTitle} value={study_title}>
             <input
-              type="text"
-              placeholder="제목을 입력해주세요"
-              id="WriteForm-2-info-title_input"
-            />
+                type="text" placeholder="제목을 입력해주세요"
+                id={title_state ? "undefined_title" : "WriteForm-2-info-title_input"}
+              />
           </div>
 
-          <div id="quill">
-            <ReactQuill onChange={Select_studyContent} value={study_content}/>
+          <div>
+            <ReactQuill onChange={Select_studyContent} value={study_content} id="quill"/>
           </div>
           <div id="WriteForm-2-info-btns">
             <button id="WriteForm-2-info-btns-cancle" onClick={write_cancle}>취소</button>
             <button id="WriteForm-2-info-btns-save" onClick={write_save}>등록</button>
           </div>
         </div>
+
       </div>
     </div>
   );
