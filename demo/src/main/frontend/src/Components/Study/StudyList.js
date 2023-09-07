@@ -39,7 +39,7 @@ function StudyList() {
                 {study_list.map(function(a,i){
                 return(
                 <div class="study-box">
-                <Link to={'/item/'+ study_list[i].study_id}> 
+                <Link to={'/study-view/'+ study_list[i].study_id} class="study-box-inbox"> 
                     <div class="study-box-inbox">
                         <div class="study-box-header">
                             <div class="study-box-header-content1">
