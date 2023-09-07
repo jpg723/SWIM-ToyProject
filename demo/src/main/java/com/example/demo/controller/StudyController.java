@@ -49,9 +49,16 @@ public class StudyController {
        return study;
     }
 
-    //스터디 전체 리스트
+    //스터디 전체 조회
     @GetMapping(value = "/list")
     public List<Study> getStudyList() {
         return studyService.getStudyList();
+    }
+
+    //스터디 상세 조회
+    @GetMapping(value = "/list/{study_id}")
+    public Study getStudy(@PathVariable("study_id") int study_id) {
+        Study study = studyService.getStudy(study_id);
+        return study;
     }
 }

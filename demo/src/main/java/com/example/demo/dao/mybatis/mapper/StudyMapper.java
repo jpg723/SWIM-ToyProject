@@ -12,4 +12,6 @@ public interface StudyMapper {
 	void registerStudy(Study study);
 	//스터디 전체 조회
 	List<Study> getStudyList();
+	//스터디 상세 조회
+	Study getStudy(int study_id);
 }

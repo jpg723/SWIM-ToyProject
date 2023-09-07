@@ -6,16 +6,16 @@ import java.util.Date;
 @SuppressWarnings("serial")
 public class Study implements Serializable{
 	
-	private String study_id, study_title, study_category, study_onoff
+	private String study_title, study_category, study_onoff
 			, study_region, writer, study_content
 			, study_create_date, study_update_date, study_state;
-	private int study_num;
+	private int study_id, study_num;
 
-	public String getStudy_id() {
+	public int getStudy_id() {
 		return study_id;
 	}
 
-	public void setStudy_id(String study_id) {
+	public void setStudy_id(int study_id) {
 		this.study_id = study_id;
 	}
 

@@ -27,4 +27,9 @@ public class MybatisStudyDao implements StudyDao {
 	public List<Study> getStudyList() throws DataAccessException {
 		return studyMapper.getStudyList();
 	}
+
+	@Override
+	public Study getStudy(int study_id) throws DataAccessException {
+		return studyMapper.getStudy(study_id);
+	}
 }

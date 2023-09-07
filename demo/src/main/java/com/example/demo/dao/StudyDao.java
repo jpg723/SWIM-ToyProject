@@ -9,6 +9,8 @@ public interface StudyDao {
 
 	//스터디 등록
 	void registerStudy(Study study) throws DataAccessException;
-	//스터디 리스트 조회
+	//스터디 전체 조회
 	List<Study> getStudyList() throws DataAccessException;
+	//스터디 상세 조회
+	Study getStudy(int study_id) throws DataAccessException;
 }

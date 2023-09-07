@@ -12,7 +12,13 @@
     </insert>
 
     <select id="getStudyList" resultType="com.example.demo.domain.Study">
-        SELECT *FROM Study
+        SELECT *FROM STUDY
+    </select>
+
+    <select id="getStudy" resultType="com.example.demo.domain.Study" parameterType="Integer">
+      SELECT  *
+      FROM STUDY
+      WHERE STUDY_ID = #{study_id}
     </select>
 </mapper>
 
