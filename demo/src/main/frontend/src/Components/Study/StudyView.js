@@ -3,9 +3,11 @@ import { ReactComponent as Arrow2} from "../../svg/Arrow 2.svg";
 import './StudyView.css';
 import { Link, useParams } from 'react-router-dom';
 import axios from 'axios'; 
+import StudyComment from './StudyCommnet';
 
 function StudyView() {
 
+    /*스터디 상세 정보 가져오기*/
     let { id } = useParams();
     const [study, setStudy] = useState("");
 
@@ -68,6 +70,8 @@ function StudyView() {
             <div id="study-view-intro-content" dangerouslySetInnerHTML={{ __html :  study.study_content  }}>
             </div>
         </div>
+        {/*댓글 */}
+        <StudyComment/>
     </div>
   )
 }
