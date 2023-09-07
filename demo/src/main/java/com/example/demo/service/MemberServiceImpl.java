@@ -20,9 +20,9 @@ public class MemberServiceImpl implements MemberService {
 		memberDao.registerMember(member);
 	}
 
-	@Override
-	public Member findByIdAndPassword(String user_id, String password) {
+	@Override /*로그인*/
+	public Member loginMember(String user_id, String password) {
 		// TODO Auto-generated method stub
-		return memberDao.findByIdAndPassword(user_id, password);
+		return memberDao.loginMember(user_id, password);
 	}
 }

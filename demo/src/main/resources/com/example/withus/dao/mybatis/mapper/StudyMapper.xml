@@ -10,5 +10,9 @@
       VALUES(study_seq.NEXTVAL, #{study_title}, #{study_category}, #{study_num}, #{study_onoff},
       #{study_region}, #{writer}, #{study_content}, #{study_create_date}, #{study_state})
     </insert>
+
+    <select id="getStudyList" resultType="com.example.demo.domain.Study">
+        SELECT *FROM Study
+    </select>
 </mapper>
 

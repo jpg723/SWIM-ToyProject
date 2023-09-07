@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 
 @Repository
 public class MybatisStudyDao implements StudyDao {
@@ -14,8 +16,15 @@ public class MybatisStudyDao implements StudyDao {
 	@Autowired
 	private StudyMapper studyMapper;
 
+	//스터디 등록
 	@Override
 	public void registerStudy(Study study) throws DataAccessException {
 		studyMapper.registerStudy(study);
+	}
+
+	//스터디 전체 조회
+	@Override
+	public List<Study> getStudyList() throws DataAccessException {
+		return studyMapper.getStudyList();
 	}
 }

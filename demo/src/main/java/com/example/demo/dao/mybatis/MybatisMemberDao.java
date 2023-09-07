@@ -16,15 +16,15 @@ public class MybatisMemberDao implements MemberDao {
 	@Autowired
 	private MemberMapper memberMapper;
 
-	@Override
+	@Override //회원가입
 	public void registerMember(Member member) throws DataAccessException {
 		memberMapper.registerMember(member);
 	}
 
-	@Override
-	public Member findByIdAndPassword(String user_id, String password) throws DataAccessException {
+	@Override //로그인
+	public Member loginMember(String user_id, String password) throws DataAccessException {
 		// TODO Auto-generated method stub
-		return memberMapper.findByIdAndPassword(user_id, password);
+		return memberMapper.loginMember(user_id, password);
 	}
 
 

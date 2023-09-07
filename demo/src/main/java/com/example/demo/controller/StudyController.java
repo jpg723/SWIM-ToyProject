@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -20,7 +21,7 @@ public class StudyController {
 	@Autowired
 	private StudyService studyService;
 
-    //새 글 등록
+    //스터디 등록
     @ResponseBody
     @RequestMapping(value="/register", method=RequestMethod.POST)
     public Study registerStudy(HttpServletRequest request, @RequestBody Map<String, Object> paramMap) throws ParseException {
@@ -46,5 +47,11 @@ public class StudyController {
        System.out.println(study);
        studyService.registerStudy(study);
        return study;
+    }
+
+    //스터디 전체 리스트
+    @GetMapping(value = "/list")
+    public List<Study> getStudyList() {
+        return studyService.getStudyList();
     }
 }

@@ -9,7 +9,7 @@
       VALUES(#{user_id}, #{password}, #{user_name}, #{phone})
     </insert>
 
-    <select id="findByIdAndPassword" resultType="com.example.demo.domain.Member">
+    <select id="loginMember" resultType="com.example.demo.domain.Member">
         SELECT *
         FROM MEMBER
         WHERE USER_ID = #{user_id, jdbcType=VARCHAR}

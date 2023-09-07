@@ -8,5 +8,5 @@ import com.example.demo.domain.Member;
 public interface MemberMapper {
   
 	void registerMember(Member member); //회원가입
-	Member findByIdAndPassword(String user_id, String password); //로그인
+	Member loginMember(String user_id, String password); //로그인
 }

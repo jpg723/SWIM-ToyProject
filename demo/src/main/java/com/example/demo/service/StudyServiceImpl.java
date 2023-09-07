@@ -5,6 +5,8 @@ import com.example.demo.domain.Study;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class StudyServiceImpl implements StudyService {
 
@@ -15,5 +17,10 @@ public class StudyServiceImpl implements StudyService {
     public void registerStudy(Study study) {
 
         studyDao.registerStudy(study);
+    }
+
+    @Override
+    public List<Study> getStudyList() {
+        return studyDao.getStudyList();
     }
 }
