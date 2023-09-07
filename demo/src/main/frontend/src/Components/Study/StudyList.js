@@ -31,7 +31,7 @@ function StudyList() {
         })
         .catch(error => console.log(error))
     },[])   
-    
+
     return (
         <div>
             <StudyListHeader/>
