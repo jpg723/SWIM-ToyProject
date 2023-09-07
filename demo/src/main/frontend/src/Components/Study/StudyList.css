@@ -21,6 +21,8 @@
     margin: 0 auto;
     width: 250px;
     height: 300px;
+    text-decoration-line: none;
+    color: black;
 }
 
 /*스터디 박스 헤더*/
