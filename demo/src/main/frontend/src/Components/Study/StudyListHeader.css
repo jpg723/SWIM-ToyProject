@@ -10,7 +10,7 @@
 }
 
 .study-list-header-content1-text{
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 700;
     height: 38px;
     margin-top: auto;
@@ -29,14 +29,14 @@
     border: 1.5px solid #788088;
     display: flex;
     margin: auto 0px;
-    width: 420px;
-    height: 50px;
+    width: 500px;
+    height: 70px;
     border-radius: 20px;
 }
 
 /*검색 입력 박스*/
 .search-input-box{
-    font-size: 18px;
+    font-size: 22px;
     width: 330px;
     padding-left: 15px;
     border: none;
@@ -63,7 +63,7 @@
 
 /*모집 중만 보기 문구*/
 .study-list-header-wrap-text{
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 700;
     height: 38px;
     margin: auto 20px auto;
@@ -72,9 +72,9 @@
 /*모집 중 스위치 버튼*/
 .recruting-btn {
     width: 65px;
-    height: 45px;
+    height: 33px;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 22px;
 }
 
 #switch {
@@ -135,7 +135,7 @@
 .study-list-line{
     border: 2px solid #F1F1F1;
     margin: 30px auto;
-    width: 1200px;
+    width: 1600px;
 
 }
 /*태그 헤더---------------------------------*/
@@ -146,7 +146,6 @@
 
 .study-tag{
     background-color: white;
-    height: 60px;
     border-radius: 30px;
     border: 1px solid #788088;
     text-align: left;
@@ -155,20 +154,18 @@
 
 .study-tag-content{
     display: flex;
+    padding: 10px 15px;
 }
 
 /*태그 이미지*/
 .study-tag-img{
-    width: 37px;
-    height: 37px;
-    margin: auto 0px auto 10px;
+    width: 43px;
+    height: 43px;
 }
 
 .study-tag-text{
-    font-size: 20px;
+    font-size: 25px;
     height: 35px;
-    margin-top: 9px;
-    margin-bottom: auto;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-top: 4px;
+    margin-left: 15px;
 }

@@ -60,7 +60,7 @@ function StudyView() {
             <div class="study-view-info-wrap">
                 <div class="study-view-info-content">
                     <div class="study-view-info-category">모집인원</div>
-                    <div>{study.study_num === 0 ? "인원 미정" : study.study_num}명</div>
+                    <div>{study.study_num === 0 ? "인원 미정" : study.study_num + "명"}</div>
                 </div>
             </div>
         </div>
