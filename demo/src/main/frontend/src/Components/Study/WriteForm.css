@@ -124,6 +124,7 @@
   width: 250px;
 }
 
+/*취소 버튼*/
 #WriteForm-2-info-btns-cancle {
   width: 120px;
   height: 40px;
@@ -136,6 +137,7 @@
   border: 2px solid #F2F2F2;
 }
 
+/*등록 버튼*/
 #WriteForm-2-info-btns-save {
   width: 120px;
   height: 40px;

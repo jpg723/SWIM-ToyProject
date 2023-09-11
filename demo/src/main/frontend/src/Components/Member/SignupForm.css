@@ -1,49 +1,52 @@
 #sign-form {
-  margin: 15px 28px 20px 28px;
+  width: 400px;
+  margin: 0 auto;
 }
 
 #Signup-id, #Signup-password, #Signup-name, #Signup-phone{
-  margin: 0 auto;
-  height: 40px;
-  width: 280px;
+  display: flex;
+  justify-content: center;
+  height: 55px;
+  width: 370px;
   border-radius: 10px;
   background: hsl(0, 0%, 95%);
   border: 0;
   color: #788088;
   font-family: Montserrat;
-  font-size: 18px;
+  font-size: 25px;
   font-style: normal;
   font-weight: 500;
   letter-spacing: -0.48px;
-  padding-left: 20px;
+  padding-left: 25px;
 }
 
 #Signup-password, #Signup-name, #Signup-phone{
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 #SignupForm-Signup_btn, #SignupForm-Login_btn{
-  height: 40px;
-  width: 305px;
+  height: 60px;
+  width: 400px;
   border: none;
   border-radius: 10px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   color: #FFF;
   text-align: center;
   font-family: Montserrat;
-  font-size: 20px;
+  font-size: 30px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   letter-spacing: -0.48px;
-  margin-top: 10px;
 }
 
 #SignupForm-Signup_btn{
+  margin-top: 10px;
   background: #93B7FF;
 }
 
 #SignupForm-Login_btn{
+  margin-top: 12px;
   background: #27272B;
 }
 
@@ -51,6 +54,6 @@
 .signup-error{
   margin-top: 2px;
   margin-left: 10px;
-  font-size: 10px;
+  font-size: 16px;
   color: red;
 }

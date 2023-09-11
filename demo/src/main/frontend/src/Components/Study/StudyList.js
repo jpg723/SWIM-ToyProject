@@ -9,8 +9,9 @@ import { ReactComponent as Comment} from "../../svg/Comment.svg";
 import axios from 'axios'; 
 
 function StudyList() {
+
     const [likeState, setLikeState] = useState(false);
-    console.log("초기상태" + likeState);
+    //console.log("초기상태" + likeState);
     function likeBtn_click() {
       /*좋아요가 안 눌러져 있을 경우 */
       if(likeState === false){
@@ -43,9 +44,11 @@ function StudyList() {
                     <div class="study-box-inbox">
                         <div class="study-box-header">
                             <div class="study-box-header-content1">
-                                {study_list[i].study_state === "모집중" ? <div>모집중</div> : <div>모집마감</div>}
+                                {study_list[i].study_state}
                             </div>
-                            <div class="study-box-header-content2">{study_list[i].study_category}</div>
+                            <div class="study-box-header-content2">
+                                {study_list[i].study_category}
+                            </div>
                         </div>
                         <div class="study-box-main">
                             <div class="study-box-region">지역 | {study_list[i].study_region}</div>
