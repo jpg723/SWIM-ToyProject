@@ -9,7 +9,7 @@
 .study-box{
     border: 2px solid #cbcbcb;
     width: 350px;
-    height: 400px;
+    height: 380px;
     border-radius: 30px;
     box-shadow: 3px 3px 3px 3px #cbcbcb;
     margin-left: 53px;
@@ -18,7 +18,7 @@
 
 .study-box-inbox{
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px 20px;
     text-decoration-line: none;
     color: black;
 }
@@ -64,12 +64,12 @@
 
 /*구분선*/
 .study-box-inbox-line{
+    margin: 15px auto;
     border: 1.5px solid #F1F1F1;
 }
 
 /*스터디 박스 하단 박스*/
 .study-box-footer{
-    margin-top: 10px;
     display: flex;
 }
 
@@ -79,8 +79,14 @@
     margin-right: 5px;
 }
 
+.study-box-footer-icon1{
+    width: 30px;
+    height: 30px;
+}
 .study-box-footer-icon2{
-    padding-top: 2px;
+    width: 22px;
+    height: 22px;
+    padding-top: 4px;
     margin-left: 15px;
 }
 
