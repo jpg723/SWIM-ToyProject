@@ -8,5 +8,10 @@
       INSERT INTO COMMENT_TB(COMMENT_ID, WRITER, COMMENT_CREATE_DATE, COMMENT_CONTENT)
       VALUES(#{comment_id}, #{writer}, #{comment_create_date}, #{comment_content})
     </insert>
+
+    <select id="getComment" resultType="com.example.demo.domain.Comment" parameterType="Integer">
+      SELECT *FROM COMMENT_TB
+      WHERE COMMENT_ID = #{comment_id}
+    </select>
 </mapper>
 

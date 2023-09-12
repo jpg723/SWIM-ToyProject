@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom';
 import './StudyComment.css';
 import axios from 'axios';
@@ -11,8 +11,7 @@ function StudyCommnet() {
   };
 
   let { id } = useParams();
-  console.log(id);
-  /*등록 버튼 클릭시*/
+  /*댓글 등록 버튼 클릭시*/
   function comment_register(){
     const date = new Date();
 
@@ -31,6 +30,20 @@ function StudyCommnet() {
       });
     }
   }
+
+  /*댓글 가져오기*/
+  const [comment, setComment] = useState("");
+  useEffect(()=>{
+    axios.get("/comment/list/" + id).then((response)=>{
+        if(response.data){
+            console.log(response.data);
+            setComment(response.data);
+        }else{
+          console.log(response.data);
+        }
+    });
+  }, []);
+
   return (
     <div>
       <div id="commnet_header">댓글</div>

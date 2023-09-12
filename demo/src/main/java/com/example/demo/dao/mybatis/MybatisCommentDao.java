@@ -10,9 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
-
 @Repository
 public class MybatisCommentDao implements CommentDao {
 	
@@ -23,5 +20,10 @@ public class MybatisCommentDao implements CommentDao {
 	@Override
 	public void registerComment(Comment comment) throws DataAccessException {
 		commentMapper.registerComment(comment);
+	}
+	//댓글 조회
+	@Override
+	public Comment getComment(int comment_id) throws DataAccessException {
+		return commentMapper.getComment(comment_id);
 	}
 }

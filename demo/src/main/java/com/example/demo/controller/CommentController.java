@@ -43,4 +43,11 @@ public class CommentController {
        commentService.registerComment(comment);
        return comment;
     }
+
+    //댓글 조회
+    @GetMapping(value = "/list/{comment_id}")
+    public Comment getComment(@PathVariable("comment_id") int comment_id) {
+        Comment comment = commentService.getComment(comment_id);
+        return comment;
+    }
 }

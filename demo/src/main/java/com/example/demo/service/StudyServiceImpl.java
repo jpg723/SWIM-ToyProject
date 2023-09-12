@@ -18,12 +18,10 @@ public class StudyServiceImpl implements StudyService {
 
         studyDao.registerStudy(study);
     }
-
     @Override /*스터디 전체 조회*/
     public List<Study> getStudyList() {
         return studyDao.getStudyList();
     }
-
     @Override /*스터디 상세 조회*/
     public Study getStudy(int study_id) {
         return studyDao.getStudy(study_id);
