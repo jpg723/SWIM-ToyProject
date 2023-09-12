@@ -12,5 +12,5 @@ public interface CommentMapper {
 	//댓글 등록
 	void registerComment(Comment comment);
 	//댓글 조회
-	Comment getComment(int comment_id);
+	List<Comment> getComment(int study_id);
 }

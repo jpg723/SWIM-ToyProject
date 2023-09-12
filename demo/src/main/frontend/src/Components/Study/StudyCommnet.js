@@ -21,7 +21,10 @@ function StudyCommnet() {
           url: '/comment/register',
           method: 'post',
           data: {
-            data1: id, data2: sessionStorage.getItem("id"), data3: date.toLocaleDateString(), data4: comment_content,
+            data1: sessionStorage.getItem("id"), 
+            data2: date.toLocaleDateString(), 
+            data3: comment_content,
+            data4: id
           } , 
           baseURL: 'http://localhost:8080',
         }

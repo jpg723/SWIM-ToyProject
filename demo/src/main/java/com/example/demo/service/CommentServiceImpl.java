@@ -19,7 +19,7 @@ public class CommentServiceImpl implements CommentService {
         commentDao.registerComment(comment);
     }
     @Override /*댓글 조회*/
-    public Comment getComment(int comment_id) {
-        return commentDao.getComment(comment_id);
+    public List<Comment> getComment(int study_id) {
+        return commentDao.getComment(study_id);
     }
 }

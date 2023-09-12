@@ -5,7 +5,7 @@ import java.io.Serializable;
 @SuppressWarnings("serial")
 public class Comment implements Serializable {
     private String writer, comment_create_date, comment_content;
-    private int comment_id;
+    private int comment_id, study_id;
 
     public int getComment_id() {
         return comment_id;
@@ -37,6 +37,14 @@ public class Comment implements Serializable {
 
     public void setComment_content(String comment_content) {
         this.comment_content = comment_content;
+    }
+
+    public int getStudy_id() {
+        return study_id;
+    }
+
+    public void setStudy_id(int study_id) {
+        this.study_id = study_id;
     }
 
     @Override
