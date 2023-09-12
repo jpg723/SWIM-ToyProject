@@ -1,7 +1,6 @@
 package com.example.demo.domain;
 
 import java.io.Serializable;
-import java.util.Date;
 
 @SuppressWarnings("serial")
 public class Study implements Serializable{
