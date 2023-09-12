@@ -25,7 +25,6 @@ function SignupForm({
 }) {
   const {
     register,
-    watch,
     handleSubmit,
     formState: { isSubmitting, isDirty, errors },
   } = useForm();
@@ -43,7 +42,7 @@ function SignupForm({
             required: "ID는 필수 입력입니다.",
           })}          
         />
-        <div class="signup-error">{errors.password && (<small role="alert">{errors.id.message}</small>)}</div>
+        <div class="signup-error">{errors.id && (<small role="alert">{errors.id.message}</small>)}</div>
       </div>
       {/*비밀번호 입력*/}
       <div>
