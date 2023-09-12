@@ -17,9 +17,9 @@
 
 /* 화살표 */
 #Login-box-back_btn{
-    width: 50px;
+    width: 30px;
     display: flex;
-    margin: 15px auto 5px 20px;
+    margin: 15px auto 5px 30px;
 }
 
 #Login-box-login{
