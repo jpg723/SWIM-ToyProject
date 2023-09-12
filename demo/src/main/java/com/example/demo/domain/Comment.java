@@ -4,13 +4,14 @@ import java.io.Serializable;
 
 @SuppressWarnings("serial")
 public class Comment implements Serializable {
-    private String comment_id, writer, comment_create_date, comment_content;
+    private String writer, comment_create_date, comment_content;
+    private int comment_id;
 
-    public String getComment_id() {
+    public int getComment_id() {
         return comment_id;
     }
 
-    public void setComment_id(String comment_id) {
+    public void setComment_id(int comment_id) {
         this.comment_id = comment_id;
     }
 

@@ -5,8 +5,8 @@
   <cache />
 
     <insert id="registerComment">
-      INSERT INTO STUDY(COMMENT_ID, WRITER, COMMENT_CREATE_DATE, COMMENT_CONTENT)
-      VALUES(comment_seq.NEXTVAL, #{comment_writer}, #{comment_create_date}, #{comment_content})
+      INSERT INTO COMMENT_TB(COMMENT_ID, WRITER, COMMENT_CREATE_DATE, COMMENT_CONTENT)
+      VALUES(#{comment_id}, #{writer}, #{comment_create_date}, #{comment_content})
     </insert>
 </mapper>
 

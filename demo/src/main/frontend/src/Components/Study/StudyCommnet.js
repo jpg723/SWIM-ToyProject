@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import {useParams} from 'react-router-dom';
 import './StudyComment.css';
 import axios from 'axios';
 
@@ -9,6 +10,8 @@ function StudyCommnet() {
     setComment_content(e.target.value);
   };
 
+  let { id } = useParams();
+  console.log(id);
   /*등록 버튼 클릭시*/
   function comment_register(){
     const date = new Date();
@@ -16,15 +19,15 @@ function StudyCommnet() {
     if(comment_content !== ""){
       axios(
         {
-          url: '/study/register',
+          url: '/comment/register',
           method: 'post',
           data: {
-            data1: sessionStorage.getItem("id"), data2: date.toLocaleDateString(), data3: comment_content,
+            data1: id, data2: sessionStorage.getItem("id"), data3: date.toLocaleDateString(), data4: comment_content,
           } , 
           baseURL: 'http://localhost:8080',
         }
       ).then(function (response) {
-        alert("백엔드 전달");
+        console.log(response.data1);
       });
     }
   }
