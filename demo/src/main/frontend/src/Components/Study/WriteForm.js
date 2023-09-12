@@ -141,7 +141,7 @@ function WriteForm() {
             </select>
           </div>
           {studyNum_state === "direct" ?
-          (<div id="WriteForm-1txt-info-select" onChange={Select_studyNum} value={study_num}>
+          (<div onChange={Select_studyNum} value={study_num}>
             <input type="text" id="selboxDirect" name="selboxDirect"/>
           </div>):(<div></div>)
           }
