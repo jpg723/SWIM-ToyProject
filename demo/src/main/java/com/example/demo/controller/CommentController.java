@@ -34,13 +34,20 @@ public class CommentController {
            i++;
        }
        Comment comment = new Comment();
-        comment.setComment_id(Integer.parseInt(commentInfo[0]));
-       comment.setWriter(commentInfo[1]);
-       comment.setComment_create_date(commentInfo[2]);
-       comment.setComment_content(commentInfo[3]);
+       comment.setWriter(commentInfo[0]);
+       comment.setComment_create_date(commentInfo[1]);
+       comment.setComment_content(commentInfo[2]);
+       comment.setStudy_id(Integer.parseInt(commentInfo[3]));
 
        System.out.println(comment);
        commentService.registerComment(comment);
        return comment;
+    }
+
+    //댓글 조회
+    @GetMapping(value = "/list/{study_id}")
+    public List<Comment> getComment(@PathVariable("study_id") int study_id) {
+        List<Comment> comment = commentService.getComment(study_id);
+        return comment;
     }
 }

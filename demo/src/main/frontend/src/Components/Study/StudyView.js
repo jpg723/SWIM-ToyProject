@@ -14,7 +14,6 @@ function StudyView() {
     useEffect(()=>{
       axios.get("/study/list/" + id).then((response)=>{
           if(response.data){
-              console.log(response.data);
               setStudy(response.data);
           }else{
             console.log(response.data);

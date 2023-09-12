@@ -21,13 +21,12 @@ public class MybatisStudyDao implements StudyDao {
 	public void registerStudy(Study study) throws DataAccessException {
 		studyMapper.registerStudy(study);
 	}
-
 	//스터디 전체 조회
 	@Override
 	public List<Study> getStudyList() throws DataAccessException {
 		return studyMapper.getStudyList();
 	}
-
+	//스터디 상세 조회
 	@Override
 	public Study getStudy(int study_id) throws DataAccessException {
 		return studyMapper.getStudy(study_id);

@@ -12,7 +12,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-
 @Repository
 public class MybatisCommentDao implements CommentDao {
 	
@@ -23,5 +22,10 @@ public class MybatisCommentDao implements CommentDao {
 	@Override
 	public void registerComment(Comment comment) throws DataAccessException {
 		commentMapper.registerComment(comment);
+	}
+	//댓글 조회
+	@Override
+	public List<Comment> getComment(int study_id) throws DataAccessException {
+		return commentMapper.getComment(study_id);
 	}
 }
