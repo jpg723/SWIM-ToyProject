@@ -3,10 +3,12 @@ import StudyListHeader from './StudyListHeader';
 import on_heart from "../../img/heart.png";
 import off_heart from "../../img/empty-heart.png";
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { ReactComponent as View} from "../../svg/View.svg";
 import { ReactComponent as Comment} from "../../svg/Comment.svg";
 import axios from 'axios'; 
+import { studyCategoryAtom } from "../../atoms";
+import {useNavigate} from 'react-router-dom'
 
 function StudyList() {
 
@@ -24,14 +26,22 @@ function StudyList() {
 
     /*스터디 리스트 가져오기*/
     const [study_list , SetStudy_list] = useState([]);
-   
+    const category = useParams(studyCategoryAtom);
+
     useEffect(()=> {
-        axios.get('/study/list').then((res)=>{
-        SetStudy_list(res.data)
-        console.log(res)
-        })
-        .catch(error => console.log(error))
-    },[])   
+        console.log(category.study_category);
+        if(category.study_category === "전체" || category.study_category === undefined){
+            axios.get('/study/list').then((res)=>{
+                SetStudy_list(res.data)
+            })
+            .catch(error => console.log(error))
+        }else{
+            axios.get(`/study/list/category/${category.study_category}`).then((res)=>{
+                SetStudy_list(res.data)
+            })
+            .catch(error => console.log(error))
+        }
+    },[])  
 
     return (
         <div>

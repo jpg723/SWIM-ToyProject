@@ -20,5 +20,11 @@
       FROM STUDY
       WHERE STUDY_ID = #{study_id}
     </select>
+
+    <select id="getStudyCategory" resultType="com.example.demo.domain.Study">
+      SELECT  *
+      FROM STUDY
+      WHERE STUDY_CATEGORY = #{study_category}
+    </select>
 </mapper>
 

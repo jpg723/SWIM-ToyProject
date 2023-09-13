@@ -126,8 +126,8 @@ function WriteForm() {
             <select id="WriteForm-option_value" onChange={Select_studyCategory} value={study_category}>
               <option value="어학">어학</option>
               <option value="취업">취업</option>
-              <option value="고시/공무원">고시/공무원</option>
-              <option value="취미/교양">취미/교양</option>
+              <option value="고시공무원">고시/공무원</option>
+              <option value="취미교양">취미/교양</option>
               <option value="프로그래밍">프로그래밍</option>
               <option value="기타">기타</option>
             </select>

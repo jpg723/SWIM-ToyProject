@@ -31,4 +31,9 @@ public class MybatisStudyDao implements StudyDao {
 	public Study getStudy(int study_id) throws DataAccessException {
 		return studyMapper.getStudy(study_id);
 	}
+	//스터디 카테고리별 조회
+	@Override
+	public List<Study> getStudyCategory(String study_category) throws DataAccessException {
+		return studyMapper.getStudyCategory(study_category);
+	}
 }

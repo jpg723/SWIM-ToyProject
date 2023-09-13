@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.domain.Comment;
 import com.example.demo.domain.Study;
 import com.example.demo.service.StudyService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,6 +60,13 @@ public class StudyController {
     @GetMapping(value = "/list/{study_id}")
     public Study getStudy(@PathVariable("study_id") int study_id) {
         Study study = studyService.getStudy(study_id);
+        return study;
+    }
+    //스터디 카테고리별 조회
+    @GetMapping(value = "/list/category/{study_category}")
+    public List<Study> getStudyCategory(@PathVariable("study_category") String study_category) {
+        List<Study> study = studyService.getStudyCategory(study_category);
+        System.out.println(study_category);
         return study;
     }
 }

@@ -26,6 +26,7 @@ function App() {
             <Route path="/write-form" element={<WriteForm />} />
             <Route path="/study-list" element={<StudyList />} />
             <Route path="/study-view/:id" element={<StudyView />} />
+            <Route path="/study-list/:study_category" element={<StudyList />} />
           </Route>
           {/* Header,Footer를 안 보여주고 싶은 컴포넌트 */}
           <Route element={<Member_Header />}>
