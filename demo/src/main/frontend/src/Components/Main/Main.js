@@ -2,6 +2,7 @@ import './Main.css'
 import { ReactComponent as Polygon} from "../../svg/Polygon 1.svg";
 import { ReactComponent as Arrow} from "../../svg/Arrow 1.svg";
 import { Link } from "react-router-dom";
+import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, StickyOut, Zoom, ZoomIn, ZoomOut } from "react-scroll-motion";
 
 function Main() {
 
