@@ -66,7 +66,6 @@ public class StudyController {
     @GetMapping(value = "/list/category/{study_category}")
     public List<Study> getStudyCategory(@PathVariable("study_category") String study_category) {
         List<Study> study = studyService.getStudyCategory(study_category);
-        System.out.println(study_category);
         return study;
     }
 }
