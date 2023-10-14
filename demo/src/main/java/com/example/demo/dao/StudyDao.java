@@ -13,4 +13,6 @@ public interface StudyDao {
 	List<Study> getStudyList() throws DataAccessException;
 	//스터디 상세 조회
 	Study getStudy(int study_id) throws DataAccessException;
+	//댓글 개수 수정
+	void updateCommentCount(Study study) throws DataAccessException;
 }

@@ -8,7 +8,7 @@ public class Study implements Serializable{
 	private String study_title, study_category, study_onoff
 			, study_region, writer, study_content
 			, study_create_date, study_update_date, study_state;
-	private int study_id, study_num;
+	private int study_id, study_num, comment_count, like_count;
 
 	public int getStudy_id() {
 		return study_id;
@@ -97,6 +97,22 @@ public class Study implements Serializable{
 		this.study_state = study_state;
 	}
 
+	public int getComment_count() {
+		return comment_count;
+	}
+
+	public void setComment_count(int comment_count) {
+		this.comment_count = comment_count;
+	}
+
+	public int getLike_count() {
+		return like_count;
+	}
+
+	public void setLike_count(int like_count) {
+		this.like_count = like_count;
+	}
+
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
@@ -118,6 +134,10 @@ public class Study implements Serializable{
 		builder.append(study_content);
 		builder.append(", study_state=");
 		builder.append(study_state);
+		builder.append(", comment_count=");
+		builder.append(comment_count);
+		builder.append(", like_count=");
+		builder.append(like_count);
 		builder.append("]");
 		return builder.toString();
 	}

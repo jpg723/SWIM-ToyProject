@@ -59,9 +59,9 @@ function StudyList() {
                         <div class="study-box-footer">
                             <div class="study-box-footer-content">
                                 <View class="study-box-footer-icon1"/>
-                                <span class="study-box-footer-count">30</span>
+                                <span class="study-box-footer-count">{study_list[i].comment_count}</span>
                                 <Comment class="study-box-footer-icon2"/>
-                                <span class="study-box-footer-count">1200</span>
+                                <span class="study-box-footer-count">{study_list[i].like_count}</span>
                             </div>
                         </div>
                     </div>

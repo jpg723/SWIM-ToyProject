@@ -74,11 +74,12 @@ function WriteForm() {
           data: {
             data1: study_title, data2: study_category, data3: study_num, data4: study_onoff,
             data5: study_region, data6: sessionStorage.getItem("id"), data7: study_content,
-            data8: date.toLocaleDateString(), data9: "모집중"
+            data8: date.toLocaleDateString(), data9: "모집중", 
+            data10: "0", data11: "0"
           } , 
           baseURL: 'http://localhost:8080',
         }
-      ).then(function (response) {
+      ).then(function () {
         document.location.href = "/study-list";
       });
     }

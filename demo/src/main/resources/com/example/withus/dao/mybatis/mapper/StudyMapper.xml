@@ -6,9 +6,11 @@
 
     <insert id="registerStudy">
       INSERT INTO STUDY(STUDY_ID, STUDY_TITLE, STUDY_CATEGORY, STUDY_NUM,
-        STUDY_ONOFF, STUDY_REGION, WRITER, STUDY_CONTENT, STUDY_CREATE_DATE, STUDY_STATE)
+        STUDY_ONOFF, STUDY_REGION, WRITER, STUDY_CONTENT, STUDY_CREATE_DATE, STUDY_STATE,
+        COMMENT_COUNT, LIKE_COUNT)
       VALUES(study_seq.NEXTVAL, #{study_title}, #{study_category}, #{study_num}, #{study_onoff},
-      #{study_region}, #{writer}, #{study_content}, #{study_create_date}, #{study_state})
+      #{study_region}, #{writer}, #{study_content}, #{study_create_date}, #{study_state},
+      #{comment_count}, #{like_count})
     </insert>
 
     <select id="getStudyList" resultType="com.example.demo.domain.Study">
@@ -20,5 +22,10 @@
       FROM STUDY
       WHERE STUDY_ID = #{study_id}
     </select>
+
+    <update id="updateCommentCount">
+      UPDATE STUDY
+      SET COMMENT_COUNT = #{comment_count}
+    </update>
 </mapper>
 

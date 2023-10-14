@@ -14,4 +14,6 @@ public interface StudyMapper {
 	List<Study> getStudyList();
 	//스터디 상세 조회
 	Study getStudy(int study_id);
+	//댓글 개수 수정
+	void updateCommentCount(Study study);
 }

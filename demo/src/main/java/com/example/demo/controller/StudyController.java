@@ -25,7 +25,7 @@ public class StudyController {
     @ResponseBody
     @RequestMapping(value="/register", method=RequestMethod.POST)
     public Study registerStudy(HttpServletRequest request, @RequestBody Map<String, Object> paramMap) throws ParseException {
-       String[] studyInfo = new String[9];
+       String[] studyInfo = new String[11];
        int i = 0;
 
        for (Map.Entry<String, Object> pair : paramMap.entrySet())
@@ -43,6 +43,8 @@ public class StudyController {
        study.setStudy_content(studyInfo[6]);
        study.setStudy_create_date(studyInfo[7]);
        study.setStudy_state(studyInfo[8]);
+       study.setComment_count(Integer.parseInt(studyInfo[9]));
+       study.setLike_count(Integer.parseInt(studyInfo[10]));
 
        System.out.println(study);
        studyService.registerStudy(study);
@@ -59,6 +61,27 @@ public class StudyController {
     @GetMapping(value = "/list/{study_id}")
     public Study getStudy(@PathVariable("study_id") int study_id) {
         Study study = studyService.getStudy(study_id);
+        return study;
+    }
+
+    //댓글 개수 수정
+    @ResponseBody
+    @RequestMapping(value="/update/comment", method=RequestMethod.POST)
+    public Study updateCommentCount(HttpServletRequest request,
+                               @RequestBody Map<String, Object> paramMap) {
+        String[] studyInfo = new String[1];
+        int i = 0;
+        for (Map.Entry<String, Object> pair : paramMap.entrySet()) {
+            studyInfo[i] = pair.getValue().toString();
+            System.out.println(studyInfo[i]);
+            i++;
+        }
+
+        Study study = new Study();
+        study.setComment_count(Integer.parseInt(studyInfo[0]));
+        System.out.println("수정:" + study);
+        studyService.updateCommentCount(study);
+
         return study;
     }
 }

@@ -31,4 +31,9 @@ public class MybatisStudyDao implements StudyDao {
 	public Study getStudy(int study_id) throws DataAccessException {
 		return studyMapper.getStudy(study_id);
 	}
+	//댓글 개수 수정
+	@Override
+	public void updateCommentCount(Study study) throws DataAccessException {
+		studyMapper.updateCommentCount(study);
+	}
 }

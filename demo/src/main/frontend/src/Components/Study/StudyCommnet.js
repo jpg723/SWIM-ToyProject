@@ -10,6 +10,8 @@ function StudyCommnet() {
     setComment_content(e.target.value);
   };
 
+  const [comment_count, setComment_count] = useState(0);
+
   let { id } = useParams();
   const navigate = useNavigate();
   /*댓글 등록 버튼 클릭시*/
@@ -30,8 +32,9 @@ function StudyCommnet() {
           baseURL: 'http://localhost:8080',
         }
       ).then(function (response) {
-        console.log(response.data1);
-        window.location.replace("/study-view/" + id);
+        //window.location.replace("/study-view/" + id);
+        console.log(comment.length);
+        setComment_count(comment.length);
       });
     }
   }
@@ -41,7 +44,6 @@ function StudyCommnet() {
   useEffect(()=>{
     axios.get("/comment/list/" + id).then((response)=>{
         if(response.data){
-            console.log(response.data);
             setComment(response.data);
         }else{
           console.log(response.data);
@@ -51,7 +53,7 @@ function StudyCommnet() {
 
   return (
     <div>
-      <div id="commnet_header">댓글</div>
+      <div id="commnet_header"><span>댓글</span><span id="comment_count">{comment.length}</span></div>
       <div id="comment_write_box">
         <textarea id="comment_write_input" placeholder='댓글을 입력하세요.' 
           onChange={Write_comment} value={comment_content}>
